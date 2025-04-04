@@ -68,15 +68,15 @@
         <member name="P:SonicBloom.Koreo.EditorUI.KoreographyEditor.WaveStartPositionOffset">
             <summary>
             Gets the offset in units for the edge of the WaveDisplay content from the
-            edge of the EditorWindow.
+             edge of the EditorWindow.
             </summary>
             <value>The number of units between the edge of the EditorWindow and the
             beginning of the Waveform display.</value>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographyEditor.OpenKoreography(SonicBloom.Koreo.Koreography,SonicBloom.Koreo.KoreographyTrackBase)">
             <summary>
-            Opens <paramref name="koreography" /> in the Koreography Editor,
-            optionally selecting <paramref name="track" />.
+            Opens <paramref name="koreography"/> in the Koreography Editor,
+            optionally selecting <paramref name="track"/>.
             </summary>
             <param name="koreography">The Koreography to open.</param>
             <param name="track">The Koreography Track to highlight.</param>
@@ -110,23 +110,21 @@
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographyEditor.IsAudioClipValid(UnityEngine.AudioClip)">
             <summary>
-            Determines if <paramref name="clip" /> is okay for editing in the Koreography
+            Determines if <paramref name="clip"/> is okay for editing in the Koreography
             Editor (if <c>AudioClip.GetData()</c> will return usable data). By default,
             <c>AudioClip</c>s are *not* valid.
             </summary>
-            <returns>
-                <c>true</c> if <paramref name="clip" /> will work with the Koreography
+            <returns><c>true</c> if <paramref name="clip"/> will work with the Koreography
             Editor; otherwise, <c>false</c>.</returns>
             <param name="clip">The <c>AudioClip</c> to check.</param>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographyEditor.CheckAudioClipValidity(UnityEngine.AudioClip)">
             <summary>
-            Checks <paramref name="clip" /> for validity.  If <paramref name="clip" /> is invalid
+            Checks <paramref name="clip"/> for validity.  If <paramref name="clip"/> is invalid
             it will pop up a dialog asking if the user wishes to take action to correct
-            the issue.  If so, this causes a quick reimport of the <paramref name="clip" />.
+            the issue.  If so, this causes a quick reimport of the <paramref name="clip"/>.
             </summary>
-            <returns>
-                <c>true</c> if <paramref name="clip" /> will work with the Koreography
+            <returns><c>true</c> if <paramref name="clip"/> will work with the Koreography
             Editor; otherwise, <c>false</c>.</returns>
             <param name="clip">The <c>AudioClip</c> to check.</param>
         </member>
@@ -140,10 +138,9 @@
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographyEditor.GetAudioSystemDisabled">
             <summary>
             Checks whether Unity's internal Audio System is disabled.  This value is typically set
-            with the "Disable Audio" setting in Edit-&gt;Project Settings-&gt;Audio.
+            with the "Disable Audio" setting in Edit->Project Settings->Audio.
             </summary>
-            <returns>
-                <c>true</c>, if the audio system is disabled, <c>false</c> otherwise.</returns>
+            <returns><c>true</c>, if the audio system is disabled, <c>false</c> otherwise.</returns>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographyEditor.SetAudioSystemDisabled(System.Boolean)">
             <summary>
@@ -169,7 +166,7 @@
         <member name="M:SonicBloom.Koreo.EditorUI.EventDisplay.DrawPayload(UnityEngine.Rect,SonicBloom.Koreo.KoreographyTrackBase,SonicBloom.Koreo.KoreographyEvent,System.Boolean)">
             <summary>
             Draws the payload.  DOES NOT do a null-check on the Payload or the KoreographyEvent.
-            Assumes both are valid.
+             Assumes both are valid.
             </summary>
             <param name="displayRect">The Rect into which to draw the UI.</param>
             <param name="track">The Koreography Track this Payload is found within.</param>
@@ -179,12 +176,28 @@
         <member name="T:SonicBloom.Koreo.EditorUI.PayloadDisplay">
             <summary>
             Handles drawing the Editor GUI for payloads.  In early Koreographer builds,
-            this functionality was implemented with inheritance of the Payload itself.
-            Due to packaging requirements in Unity 4.5/4.6, this method is not viable.
-            As such we use the dispatch method that "simulates" the vtable.  This is
-            ever-so-slightly slower (testing on Mid-2012 MBP with Retina reveals ~1.6%
-            slower).
+             this functionality was implemented with inheritance of the Payload itself.
+             Due to packaging requirements in Unity 4.5/4.6, this method is not viable.
+             As such we use the dispatch method that "simulates" the vtable.  This is
+             ever-so-slightly slower (testing on Mid-2012 MBP with Retina reveals ~1.6%
+             slower).
             </summary>
+        </member>
+        <member name="M:SonicBloom.Koreo.EditorUI.WaveDisplay.Draw(UnityEngine.Rect,SonicBloom.Koreo.EditorUI.WaveDisplayState,SonicBloom.Koreo.Koreography,System.Boolean,System.Collections.Generic.List{SonicBloom.Koreo.KoreographyEvent})">
+            <summary>
+            Draws the waveform, including left and right channels, tempo sections, beat lines, events, and
+            the playhead.
+            
+            Note: You must check whether the waveform data is properly loaded (e.g. with the
+            <c>HasAudioData()</c> method) before calling this method. Failure to do so may result in thrown
+            exceptions. Additionally, handling lack of audio outside of this method allows for customization
+            of the messaging around the issue.
+            </summary>
+            <param name="displayRect">The area within which to render the waveform.</param>
+            <param name="displayState">The state of the waveform to draw.</param>
+            <param name="koreo">The current Koreography being rendered.</param>
+            <param name="bShowPlayhead">Whether or not the current playhead should be visible.</param>
+            <param name="selectedEvents">The set of selected Koreography Events.</param>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.WaveDisplay.GetSamplePositionOfPoint(UnityEngine.Vector2,SonicBloom.Koreo.EditorUI.WaveDisplayState)">
             <summary>
@@ -222,6 +235,13 @@
             as a property of other classes, behaviours, etc.
             </summary>
         </member>
+        <member name="T:SonicBloom.Koreo.EditorUI.UnityTools.EventIDPropertyDrawer">
+            <summary>
+            Custom Property Drawer for the <c>EventIDAttribute</c>.  This
+            class customizes the representation of fields marked with
+            either [EventID] or [EventIDAttribute].
+            </summary>
+        </member>
         <member name="P:SonicBloom.Koreo.EditorUI.MIDIConverter.MIDIPath">
             <summary>
             Gets or sets a valid version of the last path used from the EditorPrefs system.  This
@@ -232,31 +252,30 @@
         <member name="M:SonicBloom.Koreo.EditorUI.MIDIConverter.GetScrollViewHeight">
             <summary>
             Calculates the size of the scroll view based on current window size, start position, and
-            some spacing rules.  This is currently shared across multiple views.  Break it up if UI
-            layouts change!
+             some spacing rules.  This is currently shared across multiple views.  Break it up if UI
+             layouts change!
             </summary>
             <returns>The height of flexible scroll views.</returns>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.MIDIConverter.CheckUpdateScrollStartPos">
             <summary>
             Sets, if necessary, the start y position of the scroll views.  This must
-            be calculated in the Repaint OnGUI flow because GetLastRect doesn't
-            return usable values in Layout OnGUI.  Annoyingly, the sizing values
-            appear to only be cared about on the Layout OnGUI pass.
+             be calculated in the Repaint OnGUI flow because GetLastRect doesn't
+             return usable values in Layout OnGUI.  Annoyingly, the sizing values
+             appear to only be cared about on the Layout OnGUI pass.
             </summary>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.TrackContainer.RestoreTrack(SonicBloom.MIDI.Objects.Track)">
             <summary>
             Restores the track reference, reconnecting all internal Channel
-            references.
+             references.
             </summary>
-            <returns>
-                <c>true</c>, if the track was restored, <c>false</c> otherwise.</returns>
+            <returns><c>true</c>, if the track was restored, <c>false</c> otherwise.</returns>
             <param name="tr">The track to restore.</param>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.TrackContainer.GetMIDIEvents(SonicBloom.MIDI.Objects.Song,System.Int32,System.Single,System.Collections.Generic.List{SonicBloom.Koreo.KoreoMIDIEvent})">
             <summary>
-            Adds <c>KoreoMIDIEvent</c>s to the <paramref name="events" /> list.
+            Adds <c>KoreoMIDIEvent</c>s to the <paramref name="events"/> list.
             </summary>
             <param name="songDef">The song definition.</param>
             <param name="sampleRate">The sample rate.</param>
@@ -266,14 +285,14 @@
         <member name="P:SonicBloom.Koreo.EditorUI.ChannelContainer.ChannelNum">
             <summary>
             Returns the ChannelNumber assigned to the MIDI Channel in
-            this Container.  This is the "name" of the channel, not
-            the index [1, 16].
+             this Container.  This is the "name" of the channel, not
+             the index [1, 16].
             </summary>
             <value>The channel number.</value>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.ChannelContainer.GetMIDIEvents(SonicBloom.MIDI.Objects.Song,System.Int32,System.Single,System.Collections.Generic.List{SonicBloom.Koreo.KoreoMIDIEvent})">
             <summary>
-            Adds <c>KoreoMIDIEvent</c>s to the <paramref name="events" /> list.
+            Adds <c>KoreoMIDIEvent</c>s to the <paramref name="events"/> list.
             </summary>
             <param name="songDef">The song definition.</param>
             <param name="sampleRate">The sample rate.</param>
@@ -289,58 +308,56 @@
             <summary>
             Returns the Root Mean Square of the collection of samples.
             </summary>
-            <returns>The Root Mean Square of the <paramref name="sampleData" />.</returns>
+            <returns>The Root Mean Square of the <paramref name="sampleData"/>.</returns>
             <param name="sampleData">The samples to compute.</param>
-            <param name="numSamples">Number samples to use from the <paramref name="sampleData" /> array.</param>
+            <param name="numSamples">Number samples to use from the <paramref name="sampleData"/> array.</param>
         </member>
         <member name="T:SonicBloom.Koreo.EditorUI.FFT2">
-            	 * Performs an in-place complex FFT.
-            	 *
-            	 * Released under the MIT License
-            	 *
-            	 * Copyright (c) 2010 Gerald T. Beauregard
-            	 *
-            	 * Permission is hereby granted, free of charge, to any person obtaining a copy
-            	 * of this software and associated documentation files (the "Software"), to
-            	 * deal in the Software without restriction, including without limitation the
-            	 * rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-            	 * sell copies of the Software, and to permit persons to whom the Software is
-            	 * furnished to do so, subject to the following conditions:
-            	 *
-            	 * The above copyright notice and this permission notice shall be included in
-            	 * all copies or substantial portions of the Software.
-            	 *
-            	 * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-            	 * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-            	 * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-            	 * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-            	 * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-            	 * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-            	 * IN THE SOFTWARE.</member>
+             Performs an in-place complex FFT.
+            
+             Released under the MIT License
+            
+             Copyright (c) 2010 Gerald T. Beauregard
+            
+             Permission is hereby granted, free of charge, to any person obtaining a copy
+             of this software and associated documentation files (the "Software"), to
+             deal in the Software without restriction, including without limitation the
+             rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+             sell copies of the Software, and to permit persons to whom the Software is
+             furnished to do so, subject to the following conditions:
+            
+             The above copyright notice and this permission notice shall be included in
+             all copies or substantial portions of the Software.
+            
+             THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+             IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+             FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+             AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+             LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+             FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+             IN THE SOFTWARE.
+        </member>
         <member name="M:SonicBloom.Koreo.EditorUI.FFT2.#ctor">
-            	     *</member>
+            
+        </member>
         <member name="M:SonicBloom.Koreo.EditorUI.FFT2.init(System.UInt32)">
-            	     * Initialize class to perform FFT of specified size.
-            	     *
-            	     * @param   logN    Log2 of FFT length. e.g. for 512 pt FFT, logN = 9.</member>
+             Initialize class to perform FFT of specified size.
+            
+             @param   logN	Log2 of FFT length. e.g. for 512 pt FFT, logN = 9.
+        </member>
         <member name="M:SonicBloom.Koreo.EditorUI.FFT2.run(System.Double[],System.Double[],System.Boolean)">
-            	     * Performs in-place complex FFT.
-            	     *
-            	     * @param   xRe     Real part of input/output
-            	     * @param   xIm     Imaginary part of input/output
-            	     * @param   inverse If true, do an inverse FFT</member>
+             Performs in-place complex FFT.
+            
+             @param   xRe		Real part of input/output
+             @param   xIm		Imaginary part of input/output
+             @param   inverse If true, do an inverse FFT
+        </member>
         <member name="M:SonicBloom.Koreo.EditorUI.FFT2.BitReverse(System.UInt32,System.UInt32)">
-            	     * Do bit reversal of specified number of places of an int
-            	     * For example, 1101 bit-reversed is 1011
-            	     *
-            	     * @param   x       Number to be bit-reverse.
-            	     * @param   numBits Number of bits in the number.</member>
-        <member name="T:SonicBloom.Koreo.EditorUI.UnityTools.EventIDPropertyDrawer">
-            <summary>
-            Custom Property Drawer for the <c>EventIDAttribute</c>.  This
-            class customizes the representation of fields marked with
-            either [EventID] or [EventIDAttribute].
-            </summary>
+             Do bit reversal of specified number of places of an int
+             For example, 1101 bit-reversed is 1011
+            
+             @param   x		Number to be bit-reverse.
+             @param   numBits Number of bits in the number.
         </member>
         <member name="T:SonicBloom.Koreo.EditorUI.CustomAssetUtility">
             <summary>
@@ -362,7 +379,7 @@
             current App Domain for any <c>System.Type</c> that subclasses the
             <c>KoreographyTrackBase</c> class.
             </summary>
-            <returns>A <c>System.Type</c><c>List</c> containing all types that subclass the
+            <returns>A <c>System.Type</c> <c>List</c> containing all types that subclass the
             <c>KoreographyTrackBase</c> class in the current <c>AppDomain</c>.</returns>
             <param name="bExcludeNoEditorCreate">Whether or not to exclude Track Types with the
             <c>NoEditorCreate</c> Attribute set.</param>
@@ -392,7 +409,7 @@
             App Domain for any <c>System.Type</c> that implements the <c>IPayload</c>
             interface.
             </summary>
-            <returns>A <c>System.Type</c><c>List</c> containing all types that implement
+            <returns>A <c>System.Type</c> <c>List</c> containing all types that implement
             the <c>IPayload</c> interface in the current AppDomain.</returns>
             <param name="bExcludeNoEditorCreate">Whether or not to exclude Payload Types with the
             <c>NoEditorCreate</c> Attribute set.</param>
@@ -401,8 +418,7 @@
             <summary>
             Determines if the type has the [NoEditorCreate] attribute applied or not.
             </summary>
-            <returns>
-                <c>true</c> if the type has the [NoEditorCreate] attribute, otherwise, <c>false</c>.</returns>
+            <returns><c>true</c> if the type has the [NoEditorCreate] attribute, otherwise, <c>false</c>.</returns>
             <param name="testType">The <c>System.Type</c> to test.</param>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographerMiscUtils.AbsoluteToRelativePath(System.String,System.String)">
@@ -410,24 +426,24 @@
             Takes two absolute paths and returns a string representing the version of the first
             relative to the second.
             </summary>
-            <returns>A representation of <paramref name="startPath" /> that is relative to <paramref name="relativeToPath" />.</returns>
+            <returns>A representation of <paramref name="startPath"/> that is relative to <paramref name="relativeToPath"/>.</returns>
             <param name="startPath">The absolute path to make relative.</param>
             <param name="relativeToPath">The absolute path to which to be made relative to.</param>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographerGUIUtils.DrawSpectrumGUI(UnityEngine.Rect,System.Single[])">
             <summary>
-            Draws the <paramref name="spectrum" /> into the <paramref name="spectrumRect" />.
+            Draws the <paramref name="spectrum"/> into the <paramref name="spectrumRect"/>.
             This method does not validate width.  You should ensure the <c>Rect</c> has enough
             with for the number of entries in the spectrum.  Bars are drawn as GL QUADs.
             </summary>
-            <param name="spectrumRect">The Rect within which to draw the <paramref name="spectrum" />.</param>
-            <param name="spectrum">The spectrum data to render into the <paramref name="spectrumRect" /> .</param>
+            <param name="spectrumRect">The Rect within which to draw the <paramref name="spectrum"/>.</param>
+            <param name="spectrum">The spectrum data to render into the <paramref name="spectrumRect"/> .</param>
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographerGUIUtils.CustomObjectField(UnityEngine.Rect,UnityEngine.Object)">
             <summary>
-                <para>Draws an Editor Field for a given <c>UnityEngine.Object</c>. This version does
+            <para>Draws an Editor Field for a given <c>UnityEngine.Object</c>. This version does
             not include the little selector icon towards the back of the field.</para>
-                <para>Left-clicking the field will open the Object Picker. Right-clicking will select
+            <para>Left-clicking the field will open the Object Picker. Right-clicking will select
             the object (if one exists) in the Project View.</para>
             </summary>
             <returns>A reference to a <c>UnityEngine.Object</c> instance or <c>null</c>.</returns>
@@ -436,8 +452,8 @@
         </member>
         <member name="M:SonicBloom.Koreo.EditorUI.KoreographerGUIUtils.ShowTypeSelectorMenu(UnityEngine.Rect,System.Collections.Generic.List{System.Type},UnityEditor.GenericMenu.MenuFunction2)">
             <summary>
-            Shows a dropdown menu (via GenericMenu) with options specified in the <paramref name="typeOptions" />
-            parameter. If a selection occurs, the <paramref name="OnOptionSelected" /> function will be called and
+            Shows a dropdown menu (via GenericMenu) with options specified in the <paramref name="typeOptions"/>
+            parameter. If a selection occurs, the <paramref name="OnOptionSelected"/> function will be called and
             passed the <c>System.Type</c> as the function's <c>data</c> parameter. If there is only one
             option, the function will be called immediately and no menu will be shown.
             </summary>
