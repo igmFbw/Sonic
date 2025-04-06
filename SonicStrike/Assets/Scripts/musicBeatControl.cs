@@ -13,7 +13,7 @@ public class musicBeatControl : MonoBehaviour
     #endregion
     [SerializeField] private Image lightCirclePrefab;
     [SerializeField] private GameObject lightCircleParent;
-    #region ∞¥≈•Œª÷√
+    #region ∞¥≈•
     [SerializeField] private RectTransform leftMoveBu;
     [SerializeField] private RectTransform leftAttackBu;
     [SerializeField] private RectTransform rightMoveBu;

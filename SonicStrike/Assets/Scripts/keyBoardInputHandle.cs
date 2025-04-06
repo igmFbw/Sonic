@@ -1,25 +1,34 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class keyBoardInputHandle : MonoBehaviour
 {
-    #region ∞¥≈•Œª÷√
-    [SerializeField] private RectTransform leftMoveBu;
-    [SerializeField] private RectTransform leftAttackBu;
-    [SerializeField] private RectTransform rightMoveBu;
-    [SerializeField] private RectTransform rightAttackBu;
+    #region ∞¥≈•
+    [SerializeField] private RectTransform leftMoveBuRt;
+    [SerializeField] private RectTransform leftAttackBuRt;
+    [SerializeField] private RectTransform rightMoveBuRt;
+    [SerializeField] private RectTransform rightAttackBuRt;
+    /*private Button leftMoveBu;
+    private Button leftAttackBu;
+    private Button rightMoveBu;
+    private Button rightAttackBu;*/
     #endregion
     [SerializeField] private Image clickEffectPrefab;
     [SerializeField] private Transform clickEffectParent;
+    /*private void Awake()
+    {
+        leftMoveBu = leftMoveBuRt.GetComponent<Button>();
+        leftAttackBu = leftAttackBuRt.GetComponent<Button>();
+        rightAttackBu = rightAttackBuRt.GetComponent<Button>();
+        rightMoveBu = rightMoveBuRt.GetComponent<Button>();
+    }*/
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.D))
         {
-            if(levelGlobalControl.instance.actFps == actType.leftMove)
+            if (levelGlobalControl.instance.actFps == actType.leftMove)
             {
                 resetFps();
-                playClickEffect(leftMoveBu.position);
+                playClickEffect(leftMoveBuRt.position);
             }
         }
         else if (Input.GetKeyDown(KeyCode.F))
@@ -27,7 +36,7 @@ public class keyBoardInputHandle : MonoBehaviour
             if (levelGlobalControl.instance.actFps == actType.leftAttack)
             {
                 resetFps();
-                playClickEffect(leftAttackBu.position);
+                playClickEffect(leftAttackBuRt.position);
             }
         }
         else if (Input.GetKeyDown(KeyCode.K))
@@ -35,7 +44,7 @@ public class keyBoardInputHandle : MonoBehaviour
             if (levelGlobalControl.instance.actFps == actType.rightMove)
             {
                 resetFps();
-                playClickEffect(rightMoveBu.position);
+                playClickEffect(rightMoveBuRt.position);
             }
         }
         else if (Input.GetKeyDown(KeyCode.J))
@@ -43,7 +52,7 @@ public class keyBoardInputHandle : MonoBehaviour
             if (levelGlobalControl.instance.actFps == actType.rightAttack)
             {
                 resetFps();
-                playClickEffect(rightAttackBu.position);
+                playClickEffect(rightAttackBuRt.position);
             }
         }
     }

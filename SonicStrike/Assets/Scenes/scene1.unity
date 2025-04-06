@@ -1673,10 +1673,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76af5a5f4e3e02e45b4630f101c67c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftMoveBu: {fileID: 727720559}
-  leftAttackBu: {fileID: 1088366621}
-  rightMoveBu: {fileID: 943914930}
-  rightAttackBu: {fileID: 731685017}
+  leftMoveBuRt: {fileID: 727720559}
+  leftAttackBuRt: {fileID: 1088366621}
+  rightMoveBuRt: {fileID: 943914930}
+  rightAttackBuRt: {fileID: 731685017}
   clickEffectPrefab: {fileID: 7069120331304074567, guid: 914e7422648a0a34e87fbc103eaa1971, type: 3}
   clickEffectParent: {fileID: 650872792}
 --- !u!1 &1867509043
