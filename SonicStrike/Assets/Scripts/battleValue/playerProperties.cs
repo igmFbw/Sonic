@@ -51,10 +51,11 @@ public class playerProperties : properties
         
     }
 
-    public void Atttack(float judge)
+    public float Atttack(float judge)
     {
         totalDamage = attackPower * judge;
         totalDamage += totalDamage * damageBoost;
+        return totalDamage;
     }
     public void Evade(float damage)
     {
@@ -70,6 +71,4 @@ public class playerProperties : properties
                 break;
         }
     }
-
-
 }
