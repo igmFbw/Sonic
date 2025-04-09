@@ -26,7 +26,7 @@ public class musicBeatControl : MonoBehaviour
         Koreographer.Instance.RegisterForEvents(rightMoveID, rightMoveBorn);
         Koreographer.Instance.RegisterForEvents(rightAttackID, rightAttackBorn);
     }
-    #region 生成光圈
+    #region 生成光圈与设置敌人行动序列
     private void leftMoveBorn(KoreographyEvent myEvent)
     {
         Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
