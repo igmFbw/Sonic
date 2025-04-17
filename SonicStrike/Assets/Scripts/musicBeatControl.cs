@@ -13,6 +13,7 @@ public class musicBeatControl : MonoBehaviour
     #endregion
     [SerializeField] private Image lightCirclePrefab;
     [SerializeField] private GameObject lightCircleParent;
+    [SerializeField] private enemy mEnemy;
     #region °´Å¥
     [SerializeField] private RectTransform leftMoveBu;
     [SerializeField] private RectTransform leftAttackBu;
@@ -32,37 +33,42 @@ public class musicBeatControl : MonoBehaviour
         Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
         newImage.rectTransform.position = leftMoveBu.position;
         levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.leftMove));
+        StartCoroutine(setFps(actType.leftMove, newImage));
     }
     private void leftAttackBorn(KoreographyEvent myEvent)
     {
         Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
         newImage.rectTransform.position = leftAttackBu.position;
         levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.leftAttack));
+        StartCoroutine(setFps(actType.leftAttack, newImage));
     }
     private void rightMoveBorn(KoreographyEvent myEvent)
     {
         Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
         newImage.rectTransform.position = rightMoveBu.position;
         levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.rightMove));
+        StartCoroutine(setFps(actType.rightMove, newImage));
     }
     private void rightAttackBorn(KoreographyEvent myEvent)
     {
         Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
         newImage.rectTransform.position = rightAttackBu.position;
         levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.rightAttack));
+        StartCoroutine(setFps(actType.rightAttack, newImage));
     }
     #endregion
     private void OnDestroy()
     {
         Koreographer.Instance.ClearEventRegister();
     }
-    private IEnumerator setFps(actType type)
+    private IEnumerator setFps(actType type,Image fps)
     {
         yield return new WaitForSeconds(.42f);
         levelGlobalControl.instance.setActType(type);
+        fps.color = new Color(1,.38f,.38f);
+        if(type == actType.leftMove||type == actType.rightMove)
+        {
+            mEnemy.playAttack();
+        }
     }
 }

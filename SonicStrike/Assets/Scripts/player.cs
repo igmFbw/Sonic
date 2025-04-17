@@ -7,45 +7,24 @@ public enum playerFps
 }
 public class player : MonoBehaviour
 {
-    [SerializeField] private Animator anim;
+    [SerializeField] private playerAnimControl anim;
     public playerFps playerAction;
     private void Start()
     {
         playerAction = playerFps.idle;
     }
-
-    #region 动画器转换
-    public void attackCall()
+    #region 动画转换
+    public void playAttack()
     {
-        anim.SetBool("isAttack", false);
+        anim.turnAttack();
     }
-    public void walkCall()
+    public void playDodge()
     {
-        anim.SetBool("isMove", false);
+        anim.turnDodge();
     }
-    public void hurtCall()
+    public void playHurt()
     {
-        anim.SetBool("isHurt", false);
+        anim.turnHurt();
     }
-    public void dodgeCall()
-    {
-        anim.SetBool("isDodge", false);
-    }
-    public void turnAttack()
-    {
-        anim.SetBool("isAttack", true);
-    }
-    public void turnWalk()
-    {
-        anim.SetBool("isMove", true);
-    }
-    public void turnHurt()
-    {
-        anim.SetBool("isHurt", true);
-    }
-    public void turnDodge()
-    {
-        anim.SetBool("isDodge", true);
-    }
-    #endregion
+#endregion
 }

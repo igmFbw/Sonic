@@ -3,6 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 public class properties : MonoBehaviour
 {
-    protected float maxHealth;
-    protected float attackPower; 
+    [SerializeField] protected float maxHealth;
+    [SerializeField] protected float attackPower;
+    protected float currentHealth;
+    private void Start()
+    {
+        currentHealth = maxHealth;
+    }
+    public void hurt(float damage)
+    {
+        currentHealth -= damage;
+    }
+    public virtual void attack()
+    {
+
+    }
 }

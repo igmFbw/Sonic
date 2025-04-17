@@ -2,17 +2,33 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class entityAnimControl
+public class entityAnimControl : MonoBehaviour
 {
     [SerializeField] protected Animator anim;
-    public Action attackEnd;
-    public Action hurtEnd;
-    public void stopAttack()
+
+    public void attackCall()
     {
-        attackEnd?.Invoke();
+        anim.SetBool("isAttack", false);
     }
-    public void stopHurt()
+    public void hurtCall()
     {
-        hurtEnd?.Invoke();
+        anim.SetBool("isHurt", false);
     }
+    public void dodgeCall()
+    {
+        anim.SetBool("isDodge", false);
+    }
+    public void turnDodge()
+    {
+        anim.SetBool("isDodge", true);
+    }
+    public void turnAttack()
+    {
+        anim.SetBool("isAttack", true);
+    }
+    public void turnHurt()
+    {
+        anim.SetBool("isHurt", true);
+    }
+    
 }
