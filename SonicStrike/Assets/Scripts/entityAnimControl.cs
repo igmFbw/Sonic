@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class entityAnimControl : MonoBehaviour
 {
-    [SerializeField] protected Animator anim;
+    public Animator anim;
 
     public void attackCall()
     {
@@ -14,7 +14,7 @@ public class entityAnimControl : MonoBehaviour
     {
         anim.SetBool("isHurt", false);
     }
-    public void dodgeCall()
+    public virtual void dodgeCall()
     {
         anim.SetBool("isDodge", false);
     }

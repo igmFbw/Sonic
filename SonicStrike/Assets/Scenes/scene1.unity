@@ -983,8 +983,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1257420942}
   - component: {fileID: 1257420944}
-  - component: {fileID: 1257420945}
   - component: {fileID: 1257420946}
+  - component: {fileID: 1257420947}
   m_Layer: 0
   m_Name: enenySprite
   m_TagString: Untagged
@@ -1059,19 +1059,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1257420945
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257420941}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acfb22908c4753040b1f016b46102421, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  anim: {fileID: 0}
 --- !u!95 &1257420946
 Animator:
   serializedVersion: 5
@@ -1093,6 +1080,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1257420947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257420941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b592fc4ce3d31334289903343127ca5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 1257420946}
 --- !u!1 &1301965418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,7 +1787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b0bb55fe6c386c42ae3bcfa6198be11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1257420945}
+  anim: {fileID: 0}
 --- !u!114 &2041423749
 MonoBehaviour:
   m_ObjectHideFlags: 0
