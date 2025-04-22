@@ -541,7 +541,7 @@ Transform:
   m_GameObject: {fileID: 626503446}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.09, y: 0.62, z: 0}
+  m_LocalPosition: {x: -3.09, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -941,8 +941,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15c2a7d6be335764fb31df4adfc6f9a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 0
-  attackPower: 0
+  maxHealth: 100
+  attackPower: 10
 --- !u!114 &1245763727
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -966,7 +966,7 @@ Transform:
   m_GameObject: {fileID: 1245763725}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.09, y: 0.62, z: 0}
+  m_LocalPosition: {x: -3.09, y: 0.48, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -983,8 +983,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1257420942}
   - component: {fileID: 1257420944}
-  - component: {fileID: 1257420943}
   - component: {fileID: 1257420945}
+  - component: {fileID: 1257420946}
   m_Layer: 0
   m_Name: enenySprite
   m_TagString: Untagged
@@ -1007,27 +1007,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2041423747}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1257420943
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1257420941}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 115bd3be6f9f8b54581fd704e14a229d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!212 &1257420944
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1069,7 +1048,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1320958516, guid: cbb1f171477cc8b4b87d6003f4b2d12f, type: 3}
+  m_Sprite: {fileID: -280886947, guid: b6322b09ba755404c9e5bd13f4f1968a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1092,7 +1071,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acfb22908c4753040b1f016b46102421, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  anim: {fileID: 1257420943}
+  anim: {fileID: 0}
+--- !u!95 &1257420946
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1257420941}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd4844cddae5f7941b2cfbdd93f2b5f9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1301965418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1767,14 +1767,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2041423746}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -9.1, y: 0.55, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1257420942}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2041423748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1998,6 +1998,6 @@ SceneRoots:
   - {fileID: 1301965422}
   - {fileID: 411256990}
   - {fileID: 1856180275}
+  - {fileID: 1245763728}
   - {fileID: 2041423747}
   - {fileID: 1828067845}
-  - {fileID: 1245763728}

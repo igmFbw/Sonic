@@ -1,0 +1,12 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+public class enemyAnimControl : entityAnimControl
+{
+    #region 与玩家动画关键帧匹配
+    public void setPlayerAttack()
+    {
+
+    }
+    #endregion
+}
