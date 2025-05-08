@@ -15,6 +15,14 @@ public class playerAnimControl : entityAnimControl
     public override void dodgeCall()
     {
         base.dodgeCall();
-        anim.SetBool("eDodge", false);
+        levelGlobalControl.instance.player.isDodge = false;
+        anim.SetBool("isDodge", false);
+    }
+    public void attack()
+    {
+        levelGlobalControl.instance.enemy.playHurt();
+        float damage;
+        damage = GetComponentInParent<playerProperties>().attackPower;
+        levelGlobalControl.instance.enemy.GetComponent<enemyProperties>().hurt(damage);
     }
 }

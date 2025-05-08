@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 public class enemy : MonoBehaviour
 {
-    [SerializeField] private entityAnimControl anim;
+    [SerializeField] private enemyAnimControl anim;
+    [SerializeField] private enemyProperties prop;
     #region ¶¯»­×ª»»
     public void playAttack()
     {
         anim.turnAttack();
     }
-    public void playDodge()
+    public void playDodge(Vector3 pos)
     {
-        anim.turnDodge();
+        anim.turnDodge(pos);
     }
     public void playHurt()
     {

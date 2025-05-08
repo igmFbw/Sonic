@@ -4,7 +4,6 @@ using UnityEngine;
 public class entityAnimControl : MonoBehaviour
 {
     public Animator anim;
-
     public void attackCall()
     {
         anim.SetBool("isAttack", false);

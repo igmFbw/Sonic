@@ -7,22 +7,11 @@ public class keyBoardInputHandle : MonoBehaviour
     [SerializeField] private RectTransform leftAttackBuRt;
     [SerializeField] private RectTransform rightMoveBuRt;
     [SerializeField] private RectTransform rightAttackBuRt;
-    /*private Button leftMoveBu;
-    private Button leftAttackBu;
-    private Button rightMoveBu;
-    private Button rightAttackBu;*/
     #endregion
     [SerializeField] private Image clickRightPrefab;
     [SerializeField] private Image clickErrorPrefab;
     [SerializeField] private Transform clickEffectParent;
     [SerializeField] private player mPlayer;
-    /*private void Awake()
-    {
-        leftMoveBu = leftMoveBuRt.GetComponent<Button>();
-        leftAttackBu = leftAttackBuRt.GetComponent<Button>();
-        rightAttackBu = rightAttackBuRt.GetComponent<Button>();
-        rightMoveBu = rightMoveBuRt.GetComponent<Button>();
-    }*/
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.D))

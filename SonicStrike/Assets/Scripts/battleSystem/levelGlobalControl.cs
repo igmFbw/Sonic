@@ -8,6 +8,8 @@ public enum actType
 public class levelGlobalControl : MonoBehaviour
 {
     public static levelGlobalControl instance;
+    public player player;
+    public enemy enemy;
     public actType actFps;
     public GameObject currentAperture;
     private void Awake()
