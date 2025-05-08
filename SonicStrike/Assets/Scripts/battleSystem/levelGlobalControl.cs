@@ -27,7 +27,7 @@ public class levelGlobalControl : MonoBehaviour
     public void setActType(actType type)
     {
         actFps = type;
-        Invoke("clearCurrentFps", .419f);
+        Invoke("clearCurrentFps", .41f);
     }
     public void clearCurrentFps()
     {
