@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: superWeapon
   m_EditorClassIdentifier: 
   type: 0
-  itemSprite: {fileID: 1729948787, guid: a0a7f8e514dca414088b1422fa6e27a5, type: 3}
+  itemSprite: {fileID: 1668619478, guid: aa6ea83cfecfac64db4a226ebf00dd7b, type: 3}
   itemName: "\u7CBE\u826F\u8109\u51B2\u5229\u722A"
   quality: 3
   basicPower: 10

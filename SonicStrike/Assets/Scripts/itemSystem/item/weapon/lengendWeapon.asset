@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: lengendWeapon
   m_EditorClassIdentifier: 
   type: 0
-  itemSprite: {fileID: -2044423851, guid: 1daaa2d60493a66478872a7b84298eea, type: 3}
+  itemSprite: {fileID: 2081240710, guid: c67a290b312a3bf4cbab2e875158582d, type: 3}
   itemName: "\u4F20\u5947\u8109\u51B2\u5229\u722A"
   quality: 5
   basicPower: 10

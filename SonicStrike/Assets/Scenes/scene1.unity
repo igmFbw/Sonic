@@ -204,7 +204,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 39993497}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 411256989}
+        m_TargetAssemblyTypeName: levelGlobalControl, Assembly-CSharp
+        m_MethodName: returnMainScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &39993497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,7 +389,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &245328771
 RectTransform:
   m_ObjectHideFlags: 0
@@ -405,7 +417,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 245328770}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 0
   m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
@@ -748,6 +760,7 @@ MonoBehaviour:
   blackImage: {fileID: 245328772}
   winUI: {fileID: 419070345}
   loseUI: {fileID: 1699346737}
+  moneyAcquire: 0
 --- !u!4 &411256990
 Transform:
   m_ObjectHideFlags: 0
@@ -3296,7 +3309,7 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1699346737}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0

@@ -5,5 +5,5 @@ using UnityEngine;
 public class shield
 {
     public shieldData basicData;
-    public float durability;
+    public int durability;
 }

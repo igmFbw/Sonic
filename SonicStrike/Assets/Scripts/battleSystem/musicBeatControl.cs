@@ -107,5 +107,8 @@ public class musicBeatControl : MonoBehaviour
         {
             levelGlobalControl.instance.win();
         }
+        playerEquip.instance.money += levelGlobalControl.instance.moneyAcquire;
+        playerEquip.instance.shieldEquip.durability -= 20;
+        playerEquip.instance.weapnEquip.durability -= 20;
     }
 }

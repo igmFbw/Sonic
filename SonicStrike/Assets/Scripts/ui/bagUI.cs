@@ -46,4 +46,9 @@ public class bagUI : MonoBehaviour
         }
         plotList.Clear();
     }
+    public void uodatePlots(int type)
+    {
+        cleanPlot();
+        openBag(type);
+    }
 }

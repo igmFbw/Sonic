@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: middleShield
   m_EditorClassIdentifier: 
   type: 1
-  itemSprite: {fileID: 1049755455, guid: e4ba18c776c941e4e9b5a07905bc55f7, type: 3}
+  itemSprite: {fileID: -779359094, guid: fc7eaaacc6bb3b94b9d1085d30482045, type: 3}
   itemName: "\u4E2D\u7EA7\u97F3\u6D6A\u62A4\u76FE"
   quality: 3
   basicPower: 400

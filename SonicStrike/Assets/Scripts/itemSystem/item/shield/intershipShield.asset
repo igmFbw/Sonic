@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: intershipShield
   m_EditorClassIdentifier: 
   type: 1
-  itemSprite: {fileID: -1322701262, guid: 3723cf976cbadcb459df68079e3af8c5, type: 3}
+  itemSprite: {fileID: -1781407265, guid: 6a5a6e9bc28af5345ae0f227415f7711, type: 3}
   itemName: "\u89C1\u4E60\u97F3\u6D6A\u62A4\u76FE"
   quality: 1
   basicPower: 100

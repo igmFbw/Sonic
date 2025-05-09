@@ -10,4 +10,9 @@ public class weaponEquipPlot : equipPlot
         base.OnPointerClick(eventData);
         bag.openBag(0);
     }
+    public void updateImage(weapon item)
+    {
+        equipItem = item;
+        itemSprite.sprite = equipItem.basicData.itemSprite;
+    }
 }

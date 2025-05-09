@@ -10,4 +10,9 @@ public class shieldEquipPlot : equipPlot
         base.OnPointerClick(eventData);
         bag.openBag(1);
     }
+    public void updateImage(shield item)
+    {
+        equipItem = item;
+        itemSprite.sprite = equipItem.basicData.itemSprite;
+    }
 }

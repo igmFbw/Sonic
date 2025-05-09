@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: excellentWeapon
   m_EditorClassIdentifier: 
   type: 0
-  itemSprite: {fileID: 214680338, guid: 48334c19d582086418f24924c2c570ff, type: 3}
+  itemSprite: {fileID: -1800265813, guid: a44ecc027566ff14989b6f3d0a1e382e, type: 3}
   itemName: "\u4F18\u79C0\u8109\u51B2\u5229\u722A"
   quality: 2
   basicPower: 10

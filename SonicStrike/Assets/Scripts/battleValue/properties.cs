@@ -6,7 +6,7 @@ public class properties : MonoBehaviour
     public float maxHealth;
     public float attackPower;
     public float currentHealth;
-    [SerializeField] private healthBar healthyBar;
+    [SerializeField] protected healthBar healthyBar;
     protected virtual void Start()
     {
         currentHealth = maxHealth;

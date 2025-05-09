@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: topShield
   m_EditorClassIdentifier: 
   type: 1
-  itemSprite: {fileID: -2044423851, guid: 1daaa2d60493a66478872a7b84298eea, type: 3}
+  itemSprite: {fileID: 759926006, guid: f49bd2b7b0243484aa18c2c1c7634da4, type: 3}
   itemName: "\u9876\u7EA7\u97F3\u6D6A\u62A4\u76FE"
   quality: 5
   basicPower: 1600

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ordinaryWeapon
   m_EditorClassIdentifier: 
   type: 0
-  itemSprite: {fileID: -260012355, guid: 93533be83b0be7b49a0e95ce9fef4d4b, type: 3}
+  itemSprite: {fileID: -953520573, guid: 5ead2083e8a5da24b891973d58418e47, type: 3}
   itemName: "\u666E\u901A\u8109\u51B2\u5229\u722A"
   quality: 1
   basicPower: 10

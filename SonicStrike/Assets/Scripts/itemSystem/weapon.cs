@@ -5,7 +5,7 @@ using UnityEngine;
 public class weapon
 {
     public weaponData basicData;
-    public float durability;
+    public int durability;
     public int power;
     public int level;
     public int experience;

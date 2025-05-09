@@ -9,6 +9,20 @@ public class playerProperties : properties
     protected override void Start()
     {
         base.Start();
+        if (playerEquip.instance.weapnEquip != null)
+        {
+            if (playerEquip.instance.weapnEquip.durability > 0)
+                attackPower += playerEquip.instance.weapnEquip.power;
+        }
+        if (playerEquip.instance.shieldEquip != null)
+        {
+            if (playerEquip.instance.shieldEquip.durability > 0)
+            {
+                currentShield = playerEquip.instance.shieldEquip.basicData.basicPower;
+                shieldBar.initValue(Mathf.RoundToInt(maxHealth));
+            }
+
+        }
     }
     public override void die()
     {
@@ -28,5 +42,4 @@ public class playerProperties : properties
             shieldBar.updateValue(Mathf.RoundToInt(currentShield),"shield: ");
         }
     }
-    //public void equip(int )
 }

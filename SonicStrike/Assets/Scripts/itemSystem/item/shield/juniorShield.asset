@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: juniorShield
   m_EditorClassIdentifier: 
   type: 1
-  itemSprite: {fileID: 85479321, guid: f0c2ecec3e5cd9d47bd5110d9cfb0084, type: 3}
+  itemSprite: {fileID: -1238633264, guid: c5e9229c17f5e2042a442c08538b2b42, type: 3}
   itemName: "\u521D\u7EA7\u97F3\u6D6A\u62A4\u76FE"
   quality: 2
   basicPower: 200
