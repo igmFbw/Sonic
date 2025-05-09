@@ -22,7 +22,17 @@ public class playerAnimControl : entityAnimControl
     {
         levelGlobalControl.instance.enemy.playHurt();
         float damage;
-        damage = GetComponentInParent<playerProperties>().attackPower;
+        damage = levelGlobalControl.instance.player.playerStat.attackPower;
         levelGlobalControl.instance.enemy.GetComponent<enemyProperties>().hurt(damage);
+    }
+    public override void turnHurt()
+    {
+        if (levelGlobalControl.instance.player.playerStat.currentShield <= 0)
+            base.turnHurt();
+        else
+        {
+            levelGlobalControl.instance.player.shieldAnim.playHurt();
+        }
+
     }
 }

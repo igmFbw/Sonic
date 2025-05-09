@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923bbb919034ba4498358057435eaa74, type: 3}
+  m_Name: intershipShield
+  m_EditorClassIdentifier: 
+  type: 1
+  itemSprite: {fileID: -1322701262, guid: 3723cf976cbadcb459df68079e3af8c5, type: 3}
+  itemName: "\u89C1\u4E60\u97F3\u6D6A\u62A4\u76FE"
+  quality: 1
+  basicPower: 100
+  battleSprite: {fileID: 353977307, guid: e10d133f59f870843a468b60ff891e38, type: 3}

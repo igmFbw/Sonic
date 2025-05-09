@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 923bbb919034ba4498358057435eaa74, type: 3}
+  m_Name: juniorShield
+  m_EditorClassIdentifier: 
+  type: 1
+  itemSprite: {fileID: 85479321, guid: f0c2ecec3e5cd9d47bd5110d9cfb0084, type: 3}
+  itemName: "\u521D\u7EA7\u97F3\u6D6A\u62A4\u76FE"
+  quality: 2
+  basicPower: 200
+  battleSprite: {fileID: 512848955, guid: 314db047ffa16504d9c999c129bff71e, type: 3}

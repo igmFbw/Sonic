@@ -5,21 +5,21 @@ public class properties : MonoBehaviour
 {
     public float maxHealth;
     public float attackPower;
-    protected float currentHealth;
+    public float currentHealth;
     [SerializeField] private healthBar healthyBar;
     protected virtual void Start()
     {
         currentHealth = maxHealth;
-        healthyBar.initValue(Mathf.FloorToInt(maxHealth));
+        healthyBar.initValue(Mathf.RoundToInt(maxHealth));
     }
-    public void hurt(float damage)
+    public virtual void hurt(float damage)
     {
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
             die();
         }
-        healthyBar.updateValue(Mathf.FloorToInt(currentHealth));
+        healthyBar.updateValue(Mathf.RoundToInt(currentHealth));
     }
     public virtual void die()
     {

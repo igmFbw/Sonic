@@ -13,9 +13,9 @@ public class healthBar : MonoBehaviour
         barSlider.value = maxValue;
         healthText.text = "HP: " + maxValue.ToString();
     }
-    public void updateValue(int value)
+    public void updateValue(int value, string str = "HP£º ")
     {
         barSlider.value = value;
-        healthText.text = "HP: " + value.ToString();
+        healthText.text = str + value.ToString();
     }
 }

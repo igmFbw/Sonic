@@ -8,9 +8,10 @@ public enum playerFps
 public class player : MonoBehaviour
 {
     [SerializeField] private playerAnimControl anim;
-    [SerializeField] private playerProperties playerStat;
+    [SerializeField] public playerProperties playerStat;
     public playerFps playerAction;
     public bool isDodge;
+    public shieldAnimControl shieldAnim;
     private void Start()
     {
         playerAction = playerFps.idle;

@@ -26,7 +26,7 @@ public class entityAnimControl : MonoBehaviour
         anim.SetBool("isAttack", true);
         anim.SetInteger("attackIndex", index);
     }
-    public void turnHurt()
+    public virtual void turnHurt()
     {
         anim.SetBool("isHurt", true);
     }

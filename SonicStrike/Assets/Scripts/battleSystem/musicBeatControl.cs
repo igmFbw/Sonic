@@ -12,6 +12,7 @@ public class musicBeatControl : MonoBehaviour
     private const string rightMoveID = "rightMove";
     private const string rightAttackID = "rightAttack";
     private const string exchangePosID = "exchangePos";
+    private const string levelEndID = "levelEnd";
     #endregion
     [SerializeField] private Image lightCirclePrefab;
     [SerializeField] private GameObject lightCircleParent;
@@ -33,6 +34,7 @@ public class musicBeatControl : MonoBehaviour
         Koreographer.Instance.RegisterForEvents(rightMoveID, rightMoveBorn);
         Koreographer.Instance.RegisterForEvents(rightAttackID, rightAttackBorn);
         Koreographer.Instance.RegisterForEvents(exchangePosID, changeDir);
+        Koreographer.Instance.RegisterForEvents(levelEndID, levelEnd);
     }
     #region 生成光圈与设置敌人行动序列
     private void leftMoveBorn(KoreographyEvent myEvent)
@@ -71,9 +73,9 @@ public class musicBeatControl : MonoBehaviour
     private IEnumerator setFps(actType type,Image fps)
     {
         yield return new WaitForSeconds(.42f);
-        levelGlobalControl.instance.setActType(type);
         fps.color = new Color(1,.38f,.38f);
-        if(type == actType.leftMove||type == actType.rightMove)
+        levelGlobalControl.instance.setActType(type);
+        if (type == actType.leftMove||type == actType.rightMove)
         {
             mEnemy.playAttack();
         }
@@ -93,6 +95,17 @@ public class musicBeatControl : MonoBehaviour
             levelGlobalControl.instance.player.transform.eulerAngles = new Vector3(0, 180, 0);
             levelGlobalControl.instance.enemy.transform.eulerAngles = new Vector3(0, 180, 0);
             levelGlobalControl.instance.enemy.playDodge(enemyRightPos.position);
+        }
+    }
+    public void levelEnd(KoreographyEvent myEvent)
+    {
+        if (levelGlobalControl.instance.enemy.prop.currentHealth >= 0)
+        {
+            levelGlobalControl.instance.lose();
+        }
+        else
+        {
+            levelGlobalControl.instance.win();
         }
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class enemy : MonoBehaviour
 {
     [SerializeField] private enemyAnimControl anim;
-    [SerializeField] private enemyProperties prop;
+    public enemyProperties prop;
     #region ¶¯»­×ª»»
     public void playAttack()
     {
