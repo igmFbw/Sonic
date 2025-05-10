@@ -7,6 +7,7 @@ public class playerEquip : MonoBehaviour
     public shield shieldEquip;
     public weapon weapnEquip;
     public int money;
+    public int levelNum = 0;
     public static playerEquip instance
     {
         get

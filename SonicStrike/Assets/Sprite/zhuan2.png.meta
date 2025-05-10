@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ba7a44181399dab4db0896ebfd1d89fc
+guid: fa5a9c756e70f07429de82de63a9f038
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: return_0
+      name: zhuan2_0
       rect:
         serializedVersion: 2
-        x: 552
-        y: 322
-        width: 817
-        height: 433
+        x: 666
+        y: 147
+        width: 2179
+        height: 2182
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,8 +124,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d82eb68e3c84ad42b42f6d90a1fda82
-      internalID: -1604993100
+      spriteID: fad160b0353c152498eb21285d491333
+      internalID: 1897130480
       vertices: []
       indices: 
       edges: []
@@ -141,7 +141,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      return_0: -1604993100
+      zhuan2_0: 1897130480
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
