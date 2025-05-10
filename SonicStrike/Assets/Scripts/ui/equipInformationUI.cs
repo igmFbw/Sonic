@@ -4,12 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 public class equipInformationUI : MonoBehaviour
 {
-    [SerializeField] private Button equipBu;
-    protected virtual void equip()
+    [SerializeField] protected Image itemImage;
+    [SerializeField] protected Text nameText;
+    [SerializeField] protected Text qualityText;
+    [SerializeField] protected Text durabilityText;
+    public virtual void equip()
     {
 
     }
-    protected virtual void unEquip()
+    public virtual void throwItem()
+    {
+
+    }
+    public virtual void fix()
     {
 
     }

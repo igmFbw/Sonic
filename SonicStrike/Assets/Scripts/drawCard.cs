@@ -1,16 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Rendering;
-
 public class drawCard : MonoBehaviour
 {
     [SerializeField] private Transform turnTable;     
     [SerializeField] private List<equipData> cardList; 
     [SerializeField] private float spinDuration = 4f; 
-    [SerializeField] private AnimationCurve spinCurve = AnimationCurve.EaseInOut(0, 0, 1, 1); // 减速曲线
-
-    private equipData selectedItem; // 临时存储中奖项
+    [SerializeField] private AnimationCurve spinCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+    private equipData selectedItem; 
     private int computeChance()
     {
         int num = Random.Range(0, 101);
@@ -63,9 +60,15 @@ public class drawCard : MonoBehaviour
         else
             return (type <= 55) ? cardList[8] : cardList[3];
     }
-
     public void StartDraw()
     {
+        if (playerEquip.instance.money < 100)
+        {
+            uiSthConrtol.instance.setTip("没有足够的节奏核心");
+            return;
+        }
+        playerEquip.instance.money -= 100;
+        uiSthConrtol.instance.updateCoin();
         selectedItem = computeType(); 
         int index = cardList.IndexOf(selectedItem); 
         float sectorAngle = 36;
@@ -91,7 +94,6 @@ public class drawCard : MonoBehaviour
         turnTable.eulerAngles = new Vector3(0, 0, endAngle);
         givePrize(selectedItem);
     }
-
     private void givePrize(equipData item)
     {
         if (item.type == equipType.weapon)
@@ -111,6 +113,5 @@ public class drawCard : MonoBehaviour
             go.durability = 100;
             uiSthConrtol.instance.bag.shieldList.Add(go);
         }
-
     }
 }

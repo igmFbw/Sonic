@@ -9,13 +9,14 @@ public class weapon
     public int power;
     public int level;
     public int upGradeCost;
-    public int calculateExp()
+    public void  calculateExp()
     {
-        return 500 * level * level - 500 * level + 2000;
+        upGradeCost =  500 * level * level - 500 * level + 2000;
     }
-    public void Grade()
+    public void upGrade()
     {
         level++;
         power += 5;
+        calculateExp();
     }
 }

@@ -7,8 +7,8 @@ public class equipPlot : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] protected bagUI bag;
     [SerializeField] protected Image itemSprite;
+    [SerializeField] protected Sprite whiteSprite;
     public virtual void OnPointerClick(PointerEventData eventData)
     {
-        bag.gameObject.SetActive(true);
     }
 }

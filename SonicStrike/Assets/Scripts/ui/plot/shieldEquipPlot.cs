@@ -7,8 +7,22 @@ public class shieldEquipPlot : equipPlot
     private shield equipItem;
     public override void OnPointerClick(PointerEventData eventData)
     {
-        base.OnPointerClick(eventData);
-        bag.openBag(1);
+
+        if(!bag.gameObject.activeSelf)
+        {
+            bag.gameObject.SetActive(true);
+            bag.openBag(1);
+        }
+        else
+        {
+            if (equipItem == null || equipItem.basicData == null)
+                return;
+            playerEquip.instance.shieldEquip = null;
+            itemSprite.sprite = whiteSprite;
+            uiSthConrtol.instance.bag.shieldList.Add(equipItem);
+            bag.uodatePlots(1);
+            equipItem = null;
+        }
     }
     public void updateImage(shield item)
     {

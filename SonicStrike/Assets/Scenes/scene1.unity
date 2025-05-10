@@ -2779,7 +2779,8 @@ MonoBehaviour:
   currentHealth: 0
   healthyBar: {fileID: 1207136513}
   maxShield: 0
-  currentShield: 30
+  currentShield: 0
+  shieldRender: {fileID: 2040388094}
   shieldBar: {fileID: 1909453490}
 --- !u!114 &1245763727
 MonoBehaviour:
@@ -3250,7 +3251,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2051712866, guid: c46fba71a377e8b48a45c315037f3720, type: 3}
+  m_Sprite: {fileID: -1460166738, guid: de0ca3547b9ec804fb1138ad39b8c9b3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

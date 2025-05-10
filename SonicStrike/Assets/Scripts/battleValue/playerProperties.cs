@@ -5,6 +5,7 @@ public class playerProperties : properties
 {
     public float maxShield;
     public float currentShield;
+    [SerializeField] private SpriteRenderer shieldRender;
     [SerializeField] private healthBar shieldBar;
     protected override void Start()
     {
@@ -20,8 +21,18 @@ public class playerProperties : properties
             {
                 currentShield = playerEquip.instance.shieldEquip.basicData.basicPower;
                 shieldBar.initValue(Mathf.RoundToInt(maxHealth));
+                shieldRender.sprite = playerEquip.instance.shieldEquip.basicData.battleSprite;
             }
-
+            else
+            {
+                shieldRender.sprite = null;
+                shieldBar.initValue(0);
+            }
+        }
+        else
+        {
+            shieldBar.initValue(0);
+            shieldRender.sprite = null;
         }
     }
     public override void die()
