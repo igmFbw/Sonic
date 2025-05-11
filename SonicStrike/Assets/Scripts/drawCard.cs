@@ -1,13 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
+using UnityEngine.UI;
 public class drawCard : MonoBehaviour
 {
     [SerializeField] private Transform turnTable;     
     [SerializeField] private List<equipData> cardList; 
     [SerializeField] private float spinDuration = 4f; 
     [SerializeField] private AnimationCurve spinCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-    private equipData selectedItem; 
+    private equipData selectedItem;
+    private bool isSpin = false;
+    [SerializeField] private CanvasGroup acquireCg;
+    [SerializeField] private RectTransform acquireRt;
+    [SerializeField] private Image aquireSprite;
+    private void OnEnable()
+    {
+        isSpin = false;
+    }
     private int computeChance()
     {
         int num = Random.Range(0, 101);
@@ -62,12 +72,16 @@ public class drawCard : MonoBehaviour
     }
     public void StartDraw()
     {
-        if (playerEquip.instance.money < 100)
+        if (isSpin)
+            return;
+        isSpin = true;
+        StartCoroutine(wait());
+        if (playerEquip.instance.money < 200)
         {
             uiSthConrtol.instance.setTip("没有足够的节奏核心");
             return;
         }
-        playerEquip.instance.money -= 100;
+        playerEquip.instance.money -= 200;
         uiSthConrtol.instance.updateCoin();
         selectedItem = computeType(); 
         int index = cardList.IndexOf(selectedItem); 
@@ -113,5 +127,18 @@ public class drawCard : MonoBehaviour
             go.durability = 100;
             uiSthConrtol.instance.bag.shieldList.Add(go);
         }
+        acquireCg.gameObject.SetActive(true);
+        aquireSprite.sprite = item.itemSprite;
+        Sequence se = DOTween.Sequence();
+        acquireCg.DOFade(1, 1);
+        se.Append(acquireRt.DOScale(new Vector3(1, 1, 1), 1));
+        se.Append(acquireCg.DOFade(0, 2));
+        se.Append(acquireRt.DOScale(new Vector3(0, 0, 0), 0.1f));
+        se.AppendCallback(() => acquireRt.gameObject.SetActive(false));
+    }
+    private IEnumerator wait()
+    {
+        yield return new WaitForSeconds(6);
+        isSpin = false;
     }
 }

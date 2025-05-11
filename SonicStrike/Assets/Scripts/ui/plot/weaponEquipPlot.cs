@@ -2,9 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using static UnityEditor.Progress;
 public class weaponEquipPlot : equipPlot
 {
     private weapon equipItem;
+    private void Start()
+    {
+        if (playerEquip.instance.weapnEquip != null && playerEquip.instance.weapnEquip.basicData != null)
+        {
+            updateImage(playerEquip.instance.weapnEquip);
+            uiSthConrtol.instance.powerText.text = (10 + equipItem.power).ToString();
+        }
+    }
     public override void OnPointerClick(PointerEventData eventData)
     {
         if (!bag.gameObject.activeSelf)

@@ -2,6 +2,7 @@ using DG.Tweening;
 using SonicBloom.Koreo;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class musicBeatControl : MonoBehaviour
@@ -73,7 +74,8 @@ public class musicBeatControl : MonoBehaviour
     private IEnumerator setFps(actType type,Image fps)
     {
         yield return new WaitForSeconds(.42f);
-        fps.color = new Color(1,.38f,.38f);
+        if(fps!=null)
+            fps.color = new Color(1,.38f,.38f);
         levelGlobalControl.instance.setActType(type);
         if (type == actType.leftMove||type == actType.rightMove)
         {

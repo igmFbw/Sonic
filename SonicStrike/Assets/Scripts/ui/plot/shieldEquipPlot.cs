@@ -5,6 +5,13 @@ using UnityEngine.EventSystems;
 public class shieldEquipPlot : equipPlot
 {
     private shield equipItem;
+    private void Start()
+    {
+        if (playerEquip.instance.shieldEquip!= null && playerEquip.instance.shieldEquip.basicData != null)
+        {
+            updateImage(playerEquip.instance.shieldEquip);
+        }
+    }
     public override void OnPointerClick(PointerEventData eventData)
     {
 

@@ -16,6 +16,9 @@ public class uiSthConrtol : MonoBehaviour
     public Text coinText;
     [SerializeField] private Transform tipParent;
     public GameObject blackImage;
+    public List<weaponData> weaponBase;
+    public List<shieldData> shieldBase;
+    public saveManager saveManage;
     private void Awake()
     {
         instance = this;

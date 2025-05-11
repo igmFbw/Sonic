@@ -58,9 +58,9 @@ public class weaponInformation : equipInformationUI
             uiSthConrtol.instance.setTip("没有足够的节奏核心");
             return;
         }
-        item.durability = 100;
         durabilityText.text = "耐久度: 100";
-        playerEquip.instance.money -= 100 - item.durability;
+        playerEquip.instance.money -= (100 - item.durability);
+        item.durability = 100;
         uiSthConrtol.instance.updateCoin();
     }
     public void UpGrade()

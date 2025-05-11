@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class mainMenu : MonoBehaviour
 {
     [SerializeField] private Button startGameBu;
-    [SerializeField] private Button loadGameBu;
     [SerializeField] private Button exitGameBu;
     [SerializeField] private GameObject blackImage;
     private void Start()
@@ -15,11 +14,6 @@ public class mainMenu : MonoBehaviour
         {
             blackImage.SetActive(true);
             StartCoroutine(changeScene());       
-        });
-        loadGameBu.onClick.AddListener(() =>
-        {
-            blackImage.SetActive(true);
-            StartCoroutine(changeScene());
         });
         exitGameBu.onClick.AddListener(() =>
         {

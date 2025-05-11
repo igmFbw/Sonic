@@ -16,4 +16,4 @@ MonoBehaviour:
   itemSprite: {fileID: 1668619478, guid: aa6ea83cfecfac64db4a226ebf00dd7b, type: 3}
   itemName: "\u7CBE\u826F\u8109\u51B2\u5229\u722A"
   quality: 3
-  basicPower: 10
+  basicPower: 20
