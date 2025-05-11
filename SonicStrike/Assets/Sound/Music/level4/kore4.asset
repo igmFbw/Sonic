@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -2076007791, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
+  m_Name: kore4
+  m_EditorClassIdentifier: 
+  mSourceClip: {fileID: 8300000, guid: d3c01c3edac6b7341bffbeb74cfd6679, type: 3}
+  mAudioFilePath: 
+  mSampleRate: 48000
+  mIgnoreLatencyOffset: 0
+  mTempoSections:
+  - sectionName: New Section
+    startSample: 0
+    samplesPerBeat: 22050
+    beatsPerMeasure: 4
+    bStartNewMeasure: 1
+  mTracks:
+  - {fileID: 11400000, guid: e66b6ad482ec8e34babef19503a7aec5, type: 2}
+  - {fileID: 11400000, guid: 65687e0cfce32bc4aaec1c2391794fd4, type: 2}
+  - {fileID: 11400000, guid: d0a3481568790094a887ddafdd03dd1f, type: 2}
+  - {fileID: 11400000, guid: 7630383ffebe3634d8cd216c32cd595c, type: 2}
+  - {fileID: 11400000, guid: 293330d8edd77c54eaa37c1fa1696d63, type: 2}
+  - {fileID: 11400000, guid: fc9aae09ca9c11a4b8134617c8a1246f, type: 2}
