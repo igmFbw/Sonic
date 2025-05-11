@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: leftAttack
   mEventList:
+  - mStartSample: 66150
+    mEndSample: 66150
   - mStartSample: 270112
     mEndSample: 270112
   - mStartSample: 352800
