@@ -13,7 +13,67 @@ MonoBehaviour:
   m_Name: leftAttack2
   m_EditorClassIdentifier: 
   mEventID: leftAttack
-  mEventList: []
+  mEventList:
+  - mStartSample: 360738
+    mEndSample: 360738
+  - mStartSample: 547722
+    mEndSample: 547722
+  - mStartSample: 848043
+    mEndSample: 848043
+  - mStartSample: 1436778
+    mEndSample: 1436778
+  - mStartSample: 1806777
+    mEndSample: 1806777
+  - mStartSample: 2194416
+    mEndSample: 2194416
+  - mStartSample: 2443581
+    mEndSample: 2443581
+  - mStartSample: 2802114
+    mEndSample: 2802114
+  - mStartSample: 3208716
+    mEndSample: 3208716
+  - mStartSample: 3655890
+    mEndSample: 3655890
+  - mStartSample: 4005603
+    mEndSample: 4005603
+  - mStartSample: 4390596
+    mEndSample: 4390596
+  - mStartSample: 4873932
+    mEndSample: 4873932
+  - mStartSample: 5183955
+    mEndSample: 5183955
+  - mStartSample: 5770926
+    mEndSample: 5770926
+  - mStartSample: 6066396
+    mEndSample: 6066396
+  - mStartSample: 6951924
+    mEndSample: 6951924
+  - mStartSample: 7555212
+    mEndSample: 7555212
+  - mStartSample: 7692804
+    mEndSample: 7692804
+  - mStartSample: 7990479
+    mEndSample: 7990479
+  - mStartSample: 8433684
+    mEndSample: 8433684
+  - mStartSample: 8727390
+    mEndSample: 8727390
+  - mStartSample: 9117675
+    mEndSample: 9117675
+  - mStartSample: 9366840
+    mEndSample: 9366840
+  - mStartSample: 9456363
+    mEndSample: 9456363
+  - mStartSample: 9911034
+    mEndSample: 9911034
+  - mStartSample: 10201653
+    mEndSample: 10201653
+  - mStartSample: 10602081
+    mEndSample: 10602081
+  - mStartSample: 10894023
+    mEndSample: 10894023
+  - mStartSample: 11369862
+    mEndSample: 11369862
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

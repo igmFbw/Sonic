@@ -13,7 +13,83 @@ MonoBehaviour:
   m_Name: rightMove3
   m_EditorClassIdentifier: 
   mEventID: rightMove
-  mEventList: []
+  mEventList:
+  - mStartSample: 22932
+    mEndSample: 22932
+  - mStartSample: 236376
+    mEndSample: 236376
+  - mStartSample: 360738
+    mEndSample: 360738
+  - mStartSample: 397341
+    mEndSample: 397341
+  - mStartSample: 690165
+    mEndSample: 690165
+  - mStartSample: 825552
+    mEndSample: 825552
+  - mStartSample: 975933
+    mEndSample: 975933
+  - mStartSample: 1137339
+    mEndSample: 1137339
+  - mStartSample: 1311534
+    mEndSample: 1311534
+  - mStartSample: 1498959
+    mEndSample: 1498959
+  - mStartSample: 1732689
+    mEndSample: 1732689
+  - mStartSample: 1900710
+    mEndSample: 1900710
+  - mStartSample: 2112831
+    mEndSample: 2112831
+  - mStartSample: 2349207
+    mEndSample: 2349207
+  - mStartSample: 2558241
+    mEndSample: 2558241
+  - mStartSample: 2935296
+    mEndSample: 2935296
+  - mStartSample: 3232530
+    mEndSample: 3232530
+  - mStartSample: 3382911
+    mEndSample: 3382911
+  - mStartSample: 3540348
+    mEndSample: 3540348
+  - mStartSample: 4350906
+    mEndSample: 4350906
+  - mStartSample: 4796757
+    mEndSample: 4796757
+  - mStartSample: 5157936
+    mEndSample: 5157936
+  - mStartSample: 5538078
+    mEndSample: 5538078
+  - mStartSample: 6031998
+    mEndSample: 6031998
+  - mStartSample: 6531210
+    mEndSample: 6531210
+  - mStartSample: 6682914
+    mEndSample: 6682914
+  - mStartSample: 6837705
+    mEndSample: 6837705
+  - mStartSample: 7065702
+    mEndSample: 7065702
+  - mStartSample: 7174188
+    mEndSample: 7174188
+  - mStartSample: 7858179
+    mEndSample: 7858179
+  - mStartSample: 8146593
+    mEndSample: 8146593
+  - mStartSample: 8565543
+    mEndSample: 8565543
+  - mStartSample: 8663886
+    mEndSample: 8663886
+  - mStartSample: 9011835
+    mEndSample: 9011835
+  - mStartSample: 9074016
+    mEndSample: 9074016
+  - mStartSample: 9335088
+    mEndSample: 9335088
+  - mStartSample: 10125360
+    mEndSample: 10125360
+  - mStartSample: 10201653
+    mEndSample: 10201653
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

@@ -14,10 +14,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: leftMove
   mEventList:
-  - mStartSample: 88200
-    mEndSample: 88200
-  - mStartSample: 176400
-    mEndSample: 176400
+  - mStartSample: 103635
+    mEndSample: 103635
+  - mStartSample: 231525
+    mEndSample: 231525
+  - mStartSample: 463491
+    mEndSample: 463491
+  - mStartSample: 850248
+    mEndSample: 850248
+  - mStartSample: 1184967
+    mEndSample: 1184967
+  - mStartSample: 1504692
+    mEndSample: 1504692
+  - mStartSample: 1657278
+    mEndSample: 1657278
+  - mStartSample: 1845144
+    mEndSample: 1845144
+  - mStartSample: 1989351
+    mEndSample: 1989351
+  - mStartSample: 2253069
+    mEndSample: 2253069
+  - mStartSample: 2434320
+    mEndSample: 2434320
+  - mStartSample: 2750958
+    mEndSample: 2750958
+  - mStartSample: 3153150
+    mEndSample: 3153150
+  - mStartSample: 3412458
+    mEndSample: 3412458
+  - mStartSample: 3598119
+    mEndSample: 3598119
+  - mStartSample: 3914316
+    mEndSample: 3914316
+  - mStartSample: 4105269
+    mEndSample: 4105269
+  - mStartSample: 4250799
+    mEndSample: 4250799
+  - mStartSample: 4309452
+    mEndSample: 4309452
+  - mStartSample: 4522455
+    mEndSample: 4522455
+  - mStartSample: 4641084
+    mEndSample: 4641084
+  - mStartSample: 4791024
+    mEndSample: 4791024
+  - mStartSample: 5026518
+    mEndSample: 5026518
+  - mStartSample: 5228055
+    mEndSample: 5228055
+  - mStartSample: 5532786
+    mEndSample: 5532786
+  - mStartSample: 6477849
+    mEndSample: 6477849
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

@@ -13,7 +13,157 @@ MonoBehaviour:
   m_Name: leftAttack4
   m_EditorClassIdentifier: 
   mEventID: leftAttack
-  mEventList: []
+  mEventList:
+  - mStartSample: 112896
+    mEndSample: 112896
+  - mStartSample: 328986
+    mEndSample: 328986
+  - mStartSample: 427329
+    mEndSample: 427329
+  - mStartSample: 626220
+    mEndSample: 626220
+  - mStartSample: 784539
+    mEndSample: 784539
+  - mStartSample: 847161
+    mEndSample: 847161
+  - mStartSample: 966231
+    mEndSample: 966231
+  - mStartSample: 1059282
+    mEndSample: 1059282
+  - mStartSample: 1375479
+    mEndSample: 1375479
+  - mStartSample: 1538649
+    mEndSample: 1538649
+  - mStartSample: 1697850
+    mEndSample: 1697850
+  - mStartSample: 2104011
+    mEndSample: 2104011
+  - mStartSample: 2436525
+    mEndSample: 2436525
+  - mStartSample: 2869587
+    mEndSample: 2869587
+  - mStartSample: 3131100
+    mEndSample: 3131100
+  - mStartSample: 3262077
+    mEndSample: 3262077
+  - mStartSample: 3611349
+    mEndSample: 3611349
+  - mStartSample: 3755556
+    mEndSample: 3755556
+  - mStartSample: 3924459
+    mEndSample: 3924459
+  - mStartSample: 4016628
+    mEndSample: 4016628
+  - mStartSample: 4103505
+    mEndSample: 4103505
+  - mStartSample: 4216842
+    mEndSample: 4216842
+  - mStartSample: 4256532
+    mEndSample: 4256532
+  - mStartSample: 4372074
+    mEndSample: 4372074
+  - mStartSample: 4495113
+    mEndSample: 4495113
+  - mStartSample: 4581990
+    mEndSample: 4581990
+  - mStartSample: 4724874
+    mEndSample: 4724874
+  - mStartSample: 4896423
+    mEndSample: 4896423
+  - mStartSample: 5077233
+    mEndSample: 5077233
+  - mStartSample: 5177340
+    mEndSample: 5177340
+  - mStartSample: 5269068
+    mEndSample: 5269068
+  - mStartSample: 5363442
+    mEndSample: 5363442
+  - mStartSample: 5497947
+    mEndSample: 5497947
+  - mStartSample: 5815467
+    mEndSample: 5815467
+  - mStartSample: 5975991
+    mEndSample: 5975991
+  - mStartSample: 6140043
+    mEndSample: 6140043
+  - mStartSample: 6257349
+    mEndSample: 6257349
+  - mStartSample: 6308946
+    mEndSample: 6308946
+  - mStartSample: 6355692
+    mEndSample: 6355692
+  - mStartSample: 6438159
+    mEndSample: 6438159
+  - mStartSample: 6595596
+    mEndSample: 6595596
+  - mStartSample: 6671448
+    mEndSample: 6671448
+  - mStartSample: 6729219
+    mEndSample: 6729219
+  - mStartSample: 6804630
+    mEndSample: 6804630
+  - mStartSample: 6904737
+    mEndSample: 6904737
+  - mStartSample: 7010577
+    mEndSample: 7010577
+  - mStartSample: 7094367
+    mEndSample: 7094367
+  - mStartSample: 7215642
+    mEndSample: 7215642
+  - mStartSample: 7340886
+    mEndSample: 7340886
+  - mStartSample: 7455105
+    mEndSample: 7455105
+  - mStartSample: 7611660
+    mEndSample: 7611660
+  - mStartSample: 7691040
+    mEndSample: 7691040
+  - mStartSample: 7985628
+    mEndSample: 7985628
+  - mStartSample: 8097642
+    mEndSample: 8097642
+  - mStartSample: 8245818
+    mEndSample: 8245818
+  - mStartSample: 8418249
+    mEndSample: 8418249
+  - mStartSample: 8761788
+    mEndSample: 8761788
+  - mStartSample: 8938188
+    mEndSample: 8938188
+  - mStartSample: 9088569
+    mEndSample: 9088569
+  - mStartSample: 9211167
+    mEndSample: 9211167
+  - mStartSample: 9285255
+    mEndSample: 9285255
+  - mStartSample: 9357138
+    mEndSample: 9357138
+  - mStartSample: 9498699
+    mEndSample: 9498699
+  - mStartSample: 9579402
+    mEndSample: 9579402
+  - mStartSample: 9696708
+    mEndSample: 9696708
+  - mStartSample: 10071999
+    mEndSample: 10071999
+  - mStartSample: 10179603
+    mEndSample: 10179603
+  - mStartSample: 10308375
+    mEndSample: 10308375
+  - mStartSample: 10439793
+    mEndSample: 10439793
+  - mStartSample: 10647504
+    mEndSample: 10647504
+  - mStartSample: 10792593
+    mEndSample: 10792593
+  - mStartSample: 10842426
+    mEndSample: 10842426
+  - mStartSample: 11062044
+    mEndSample: 11062044
+  - mStartSample: 11241531
+    mEndSample: 11241531
+  - mStartSample: 11430279
+    mEndSample: 11430279
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

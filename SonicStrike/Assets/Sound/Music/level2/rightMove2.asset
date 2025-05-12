@@ -13,7 +13,65 @@ MonoBehaviour:
   m_Name: rightMove2
   m_EditorClassIdentifier: 
   mEventID: rightMove
-  mEventList: []
+  mEventList:
+  - mStartSample: 254457
+    mEndSample: 254457
+  - mStartSample: 1143513
+    mEndSample: 1143513
+  - mStartSample: 1232154
+    mEndSample: 1232154
+  - mStartSample: 1642284
+    mEndSample: 1642284
+  - mStartSample: 1914822
+    mEndSample: 1914822
+  - mStartSample: 2284821
+    mEndSample: 2284821
+  - mStartSample: 3006738
+    mEndSample: 3006738
+  - mStartSample: 3264723
+    mEndSample: 3264723
+  - mStartSample: 3849048
+    mEndSample: 3849048
+  - mStartSample: 4098654
+    mEndSample: 4098654
+  - mStartSample: 4691358
+    mEndSample: 4691358
+  - mStartSample: 5285385
+    mEndSample: 5285385
+  - mStartSample: 5936742
+    mEndSample: 5936742
+  - mStartSample: 6554583
+    mEndSample: 6554583
+  - mStartSample: 6864165
+    mEndSample: 6864165
+  - mStartSample: 7168896
+    mEndSample: 7168896
+  - mStartSample: 7407477
+    mEndSample: 7407477
+  - mStartSample: 7605927
+    mEndSample: 7605927
+  - mStartSample: 7792470
+    mEndSample: 7792470
+  - mStartSample: 8086617
+    mEndSample: 8086617
+  - mStartSample: 8535996
+    mEndSample: 8535996
+  - mStartSample: 8917461
+    mEndSample: 8917461
+  - mStartSample: 9260118
+    mEndSample: 9260118
+  - mStartSample: 9514134
+    mEndSample: 9514134
+  - mStartSample: 9810045
+    mEndSample: 9810045
+  - mStartSample: 10005408
+    mEndSample: 10005408
+  - mStartSample: 10453464
+    mEndSample: 10453464
+  - mStartSample: 10691604
+    mEndSample: 10691604
+  - mStartSample: 11276811
+    mEndSample: 11276811
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

@@ -13,7 +13,107 @@ MonoBehaviour:
   m_Name: rightAttack4
   m_EditorClassIdentifier: 
   mEventID: rightAttack
-  mEventList: []
+  mEventList:
+  - mStartSample: 242991
+    mEndSample: 242991
+  - mStartSample: 577710
+    mEndSample: 577710
+  - mStartSample: 674730
+    mEndSample: 674730
+  - mStartSample: 871416
+    mEndSample: 871416
+  - mStartSample: 1114848
+    mEndSample: 1114848
+  - mStartSample: 1217601
+    mEndSample: 1217601
+  - mStartSample: 1480878
+    mEndSample: 1480878
+  - mStartSample: 1647135
+    mEndSample: 1647135
+  - mStartSample: 1833678
+    mEndSample: 1833678
+  - mStartSample: 1942164
+    mEndSample: 1942164
+  - mStartSample: 2169279
+    mEndSample: 2169279
+  - mStartSample: 2330244
+    mEndSample: 2330244
+  - mStartSample: 2570589
+    mEndSample: 2570589
+  - mStartSample: 2810493
+    mEndSample: 2810493
+  - mStartSample: 2983365
+    mEndSample: 2983365
+  - mStartSample: 3338811
+    mEndSample: 3338811
+  - mStartSample: 3339252
+    mEndSample: 3339252
+  - mStartSample: 3339693
+    mEndSample: 3339693
+  - mStartSample: 3499776
+    mEndSample: 3499776
+  - mStartSample: 4179357
+    mEndSample: 4179357
+  - mStartSample: 4297986
+    mEndSample: 4297986
+  - mStartSample: 4414851
+    mEndSample: 4414851
+  - mStartSample: 4821894
+    mEndSample: 4821894
+  - mStartSample: 4992120
+    mEndSample: 4992120
+  - mStartSample: 5873679
+    mEndSample: 5873679
+  - mStartSample: 6067719
+    mEndSample: 6067719
+  - mStartSample: 6170472
+    mEndSample: 6170472
+  - mStartSample: 6286014
+    mEndSample: 6286014
+  - mStartSample: 6380829
+    mEndSample: 6380829
+  - mStartSample: 7156548
+    mEndSample: 7156548
+  - mStartSample: 7287966
+    mEndSample: 7287966
+  - mStartSample: 7360290
+    mEndSample: 7360290
+  - mStartSample: 7434378
+    mEndSample: 7434378
+  - mStartSample: 7564032
+    mEndSample: 7564032
+  - mStartSample: 7721028
+    mEndSample: 7721028
+  - mStartSample: 8282421
+    mEndSample: 8282421
+  - mStartSample: 8350335
+    mEndSample: 8350335
+  - mStartSample: 8543052
+    mEndSample: 8543052
+  - mStartSample: 8648010
+    mEndSample: 8648010
+  - mStartSample: 8902467
+    mEndSample: 8902467
+  - mStartSample: 9139284
+    mEndSample: 9139284
+  - mStartSample: 9321417
+    mEndSample: 9321417
+  - mStartSample: 9396828
+    mEndSample: 9396828
+  - mStartSample: 9757125
+    mEndSample: 9757125
+  - mStartSample: 9967041
+    mEndSample: 9967041
+  - mStartSample: 10241343
+    mEndSample: 10241343
+  - mStartSample: 10899756
+    mEndSample: 10899756
+  - mStartSample: 11003832
+    mEndSample: 11003832
+  - mStartSample: 11354868
+    mEndSample: 11354868
+  - mStartSample: 11481876
+    mEndSample: 11481876
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

@@ -14,8 +14,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: exchangePos
   mEventList:
-  - mStartSample: 396900
-    mEndSample: 396900
+  - mStartSample: 653121
+    mEndSample: 653121
+  - mStartSample: 1606563
+    mEndSample: 1606563
+  - mStartSample: 2182509
+    mEndSample: 2182509
+  - mStartSample: 2285262
+    mEndSample: 2285262
+  - mStartSample: 2520756
+    mEndSample: 2520756
+  - mStartSample: 3654126
+    mEndSample: 3654126
+  - mStartSample: 3774960
+    mEndSample: 3774960
+  - mStartSample: 3885210
+    mEndSample: 3885210
+  - mStartSample: 3958416
+    mEndSample: 3958416
+  - mStartSample: 5145147
+    mEndSample: 5145147
+  - mStartSample: 5302143
+    mEndSample: 5302143
+  - mStartSample: 5820759
+    mEndSample: 5820759
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
