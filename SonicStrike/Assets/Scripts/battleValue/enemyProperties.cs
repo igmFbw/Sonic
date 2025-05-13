@@ -8,8 +8,13 @@ public class enemyProperties : properties
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
+            healthyBar.updateValue(0);
             levelGlobalControl.instance.moneyAcquire += Mathf.RoundToInt(damage);
+            healthyBar.updateValue(levelGlobalControl.instance.moneyAcquire, "Point:");
         }
-        healthyBar.updateValue(Mathf.RoundToInt(currentHealth));
+        else
+        {
+            healthyBar.updateValue(Mathf.RoundToInt(currentHealth));
+        }
     }
 }

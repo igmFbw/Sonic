@@ -13,6 +13,16 @@ public class saveManager : MonoBehaviour
         dataHandler = new fileDataHandler(@"D:\gameSave", "gameData");
         data = new gameData();
         loadGame();
+        if(playerEquip.instance.isBattle)
+        {
+            playerEquip.instance.isBattle = false;
+            if (playerEquip.instance.shieldEquip != null && playerEquip.instance.shieldEquip.durability>=20)
+                playerEquip.instance.shieldEquip.durability -= 20;
+            if (playerEquip.instance.shieldEquip != null && playerEquip.instance.weapnEquip.durability>=20)
+                playerEquip.instance.weapnEquip.durability -= 20;
+            playerEquip.instance.money += playerEquip.instance.moneyAcquire;
+            uiSthConrtol.instance.updateCoin();
+        }
     }
     public void loadGame()
     {

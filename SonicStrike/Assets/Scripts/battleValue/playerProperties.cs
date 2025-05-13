@@ -48,9 +48,12 @@ public class playerProperties : properties
         else
         {
             currentShield -= damage;
+            shieldBar.updateValue(Mathf.RoundToInt(currentShield), "shield: ");
             if (currentShield <= 0)
+            {
                 levelGlobalControl.instance.player.shieldAnim.playDisappear();
-            shieldBar.updateValue(Mathf.RoundToInt(currentShield),"shield: ");
+                shieldBar.updateValue(0, "shield: ");
+            }
         }
     }
 }

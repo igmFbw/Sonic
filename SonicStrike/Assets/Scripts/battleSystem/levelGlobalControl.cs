@@ -53,6 +53,7 @@ public class levelGlobalControl : MonoBehaviour
         se.Append(winUI.GetComponent<CanvasGroup>().DOFade(1, 1));
         if (levelIndex > playerEquip.instance.levelNum)
             playerEquip.instance.levelNum = levelIndex;
+        acquireEffect();
     }
     public void lose()
     {
@@ -60,9 +61,16 @@ public class levelGlobalControl : MonoBehaviour
         Sequence se = DOTween.Sequence();
         se.Append(blackImage.DOFade(1, 1).OnComplete(() => loseUI.SetActive(true)));
         se.Append(loseUI.GetComponent<CanvasGroup>().DOFade(1, 1));
+        acquireEffect();
     }
-    public void aquireEffect()
+    public void acquireEffect()
     {
+        if (moneyAcquire <= 0)
+        {
+            playerEquip.instance.moneyAcquire = 0;
+            return;
+        }
+        playerEquip.instance.moneyAcquire = moneyAcquire;
         acquireItem.gameObject.SetActive(true);
         acquireText.text = moneyAcquire.ToString();
         Sequence se = DOTween.Sequence();

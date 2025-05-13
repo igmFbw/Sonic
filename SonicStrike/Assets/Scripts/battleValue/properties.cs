@@ -15,11 +15,12 @@ public class properties : MonoBehaviour
     public virtual void hurt(float damage)
     {
         currentHealth -= damage;
+        healthyBar.updateValue(Mathf.RoundToInt(currentHealth));
         if (currentHealth <= 0)
         {
+            healthyBar.updateValue(0);
             die();
         }
-        healthyBar.updateValue(Mathf.RoundToInt(currentHealth));
     }
     public virtual void die()
     {

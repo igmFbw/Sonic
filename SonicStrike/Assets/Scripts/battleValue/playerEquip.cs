@@ -8,6 +8,8 @@ public class playerEquip : MonoBehaviour,ISaveManager
     public weapon weapnEquip;
     public int money;
     public int levelNum = 0;
+    public bool isBattle = false;
+    public int moneyAcquire;
     public static playerEquip instance
     {
         get
