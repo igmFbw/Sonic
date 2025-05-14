@@ -27,6 +27,8 @@ public class chooseLevelSquare : MonoBehaviour,IPointerClickHandler
     {
         uiSthConrtol.instance.saveManage.saveGame();
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(levelIndex);
+        mainScene.choose = levelIndex - 1;
+        mainScene.sceneControl = levelIndex;
+        SceneManager.LoadScene(5);
     }
 }

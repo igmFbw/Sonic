@@ -21,6 +21,7 @@ public class saveManager : MonoBehaviour
             if (playerEquip.instance.shieldEquip != null && playerEquip.instance.weapnEquip.durability>=20)
                 playerEquip.instance.weapnEquip.durability -= 20;
             playerEquip.instance.money += playerEquip.instance.moneyAcquire;
+            playerEquip.instance.levelNum = playerEquip.instance.levelNumAcquire;
             uiSthConrtol.instance.updateCoin();
         }
     }

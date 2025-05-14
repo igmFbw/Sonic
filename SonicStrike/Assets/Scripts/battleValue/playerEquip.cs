@@ -7,9 +7,10 @@ public class playerEquip : MonoBehaviour,ISaveManager
     public shield shieldEquip;
     public weapon weapnEquip;
     public int money;
-    public int levelNum = 0;
+    public int levelNum;
     public bool isBattle = false;
     public int moneyAcquire;
+    public int levelNumAcquire;
     public static playerEquip instance
     {
         get

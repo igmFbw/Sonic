@@ -3778,7 +3778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1769680622
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4476,8 +4476,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ea147bafd054d44984383ddfad7f759, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 8000
-  attackPower: 10
+  maxHealth: 900
+  attackPower: 100
   currentHealth: 0
   healthyBar: {fileID: 627079467}
 --- !u!1 &2138981900

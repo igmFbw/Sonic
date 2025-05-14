@@ -21,12 +21,13 @@ public class playerProperties : properties
             {
                 currentShield = playerEquip.instance.shieldEquip.basicData.basicPower;
                 shieldBar.initValue(Mathf.RoundToInt(maxHealth));
+                shieldBar.updateValue(Mathf.RoundToInt(currentShield),"shield: ");
                 shieldRender.sprite = playerEquip.instance.shieldEquip.basicData.battleSprite;
             }
             else
             {
                 shieldRender.sprite = null;
-                shieldBar.initValue(0);
+                shieldBar.updateValue(0, "shield: ");
             }
         }
         else

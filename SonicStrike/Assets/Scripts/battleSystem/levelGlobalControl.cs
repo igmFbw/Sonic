@@ -52,7 +52,7 @@ public class levelGlobalControl : MonoBehaviour
         se.Append(blackImage.DOFade(1, 1).OnComplete(() => winUI.SetActive(true) ));
         se.Append(winUI.GetComponent<CanvasGroup>().DOFade(1, 1));
         if (levelIndex > playerEquip.instance.levelNum)
-            playerEquip.instance.levelNum = levelIndex;
+            playerEquip.instance.levelNumAcquire = levelIndex;
         acquireEffect();
     }
     public void lose()
