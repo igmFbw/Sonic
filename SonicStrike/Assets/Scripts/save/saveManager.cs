@@ -9,7 +9,7 @@ public class saveManager : MonoBehaviour
     private fileDataHandler dataHandler;
     private void Awake()
     {
-        saveManagers = findAllSaveManagers();
+        /*saveManagers = findAllSaveManagers();
         dataHandler = new fileDataHandler(@"D:\gameSave", "gameData");
         data = new gameData();
         loadGame();
@@ -23,7 +23,8 @@ public class saveManager : MonoBehaviour
             playerEquip.instance.money += playerEquip.instance.moneyAcquire;
             playerEquip.instance.levelNum = playerEquip.instance.levelNumAcquire;
             uiSthConrtol.instance.updateCoin();
-        }
+        }*/
+        StartCoroutine(ssave());
     }
     public void loadGame()
     {
@@ -54,5 +55,24 @@ public class saveManager : MonoBehaviour
     public void OnApplicationQuit()
     {
         saveGame();
+    }
+    private IEnumerator ssave()
+    {
+        yield return new WaitForEndOfFrame();
+        saveManagers = findAllSaveManagers();
+        dataHandler = new fileDataHandler(@"D:\gameSave", "gameData");
+        data = new gameData();
+        loadGame();
+        if (playerEquip.instance.isBattle)
+        {
+            playerEquip.instance.isBattle = false;
+            if (playerEquip.instance.shieldEquip != null && playerEquip.instance.shieldEquip.durability >= 20)
+                playerEquip.instance.shieldEquip.durability -= 20;
+            if (playerEquip.instance.shieldEquip != null && playerEquip.instance.weapnEquip.durability >= 20)
+                playerEquip.instance.weapnEquip.durability -= 20;
+            playerEquip.instance.money += playerEquip.instance.moneyAcquire;
+            playerEquip.instance.levelNum = playerEquip.instance.levelNumAcquire;
+            uiSthConrtol.instance.updateCoin();
+        }
     }
 }

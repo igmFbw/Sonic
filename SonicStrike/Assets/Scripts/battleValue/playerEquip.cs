@@ -72,6 +72,7 @@ public class playerEquip : MonoBehaviour,ISaveManager
     {
         data.money = money;
         data.level = levelNum;
+        //Debug.Log(levelNum);
         if (weapnEquip!=null&&weapnEquip.basicData != null)
         {
             weaponSaveData newWeapon = new weaponSaveData(weapnEquip.level, weapnEquip.durability, weapnEquip.basicData.quality);
