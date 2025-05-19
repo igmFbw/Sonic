@@ -4492,6 +4492,7 @@ MonoBehaviour:
   attackPower: 30
   currentHealth: 0
   healthyBar: {fileID: 627079467}
+  yuanShen: {fileID: 1927611456}
 --- !u!1 &2138981900
 GameObject:
   m_ObjectHideFlags: 0
