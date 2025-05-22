@@ -14,55 +14,11 @@ public class keyBoardInputHandle : MonoBehaviour
     [SerializeField] private player mPlayer;
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            if (levelGlobalControl.instance.actFps == actType.leftMove)
-            {
-                resetFps();
-                playClickEffect(leftMoveBuRt.position, clickRightPrefab);
-                mPlayer.playDodge();
-            }
-            else
-                playClickEffect(leftMoveBuRt.position, clickErrorPrefab);
-        }
-        else if (Input.GetKeyDown(KeyCode.F))
-        {
-            if (levelGlobalControl.instance.actFps == actType.leftAttack)
-            {
-                resetFps();
-                playClickEffect(leftAttackBuRt.position, clickRightPrefab);
-                mPlayer.playAttack();
-            }
-            else
-                playClickEffect(leftAttackBuRt.position, clickErrorPrefab);
-        }
-        else if (Input.GetKeyDown(KeyCode.K))
-        {
-            if (levelGlobalControl.instance.actFps == actType.rightMove)
-            {
-                resetFps();
-                playClickEffect(rightMoveBuRt.position, clickRightPrefab);
-                mPlayer.playDodge();
-            }
-            else
-                playClickEffect(rightMoveBuRt.position, clickErrorPrefab);
-        }
-        else if (Input.GetKeyDown(KeyCode.J))
-        {
-            if (levelGlobalControl.instance.actFps == actType.rightAttack)
-            {
-                resetFps();
-                playClickEffect(rightAttackBuRt.position, clickRightPrefab);
-                mPlayer.playAttack();
-            }
-            else
-                playClickEffect(rightAttackBuRt.position, clickErrorPrefab);
-        }
+        
     }
     private void resetFps()
     {
         Destroy(levelGlobalControl.instance.currentAperture);
-        levelGlobalControl.instance.clearCurrentFps();
     }
     private void playClickEffect(Vector3 pos,Image clickEffect)
     {

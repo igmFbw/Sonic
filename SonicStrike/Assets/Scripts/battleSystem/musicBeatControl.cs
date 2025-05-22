@@ -2,7 +2,6 @@ using DG.Tweening;
 using SonicBloom.Koreo;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 public class musicBeatControl : MonoBehaviour
@@ -15,7 +14,7 @@ public class musicBeatControl : MonoBehaviour
     private const string exchangePosID = "exchangePos";
     private const string levelEndID = "levelEnd";
     #endregion
-    [SerializeField] private Image lightCirclePrefab;
+    [SerializeField] private GameObject lightCirclePrefab;
     [SerializeField] private GameObject lightCircleParent;
     [SerializeField] private enemy mEnemy;
     [SerializeField] private Transform came;
@@ -23,10 +22,10 @@ public class musicBeatControl : MonoBehaviour
     [SerializeField] private Transform enemyLeftPos;
     [SerializeField] private Transform enemyRightPos;
     #region 按钮
-    [SerializeField] private RectTransform leftMoveBu;
-    [SerializeField] private RectTransform leftAttackBu;
-    [SerializeField] private RectTransform rightMoveBu;
-    [SerializeField] private RectTransform rightAttackBu;
+    [SerializeField] private beatButton leftMoveBu;
+    [SerializeField] private beatButton leftAttackBu;
+    [SerializeField] private beatButton rightMoveBu;
+    [SerializeField] private beatButton rightAttackBu;
     #endregion
     private void Start()
     {
@@ -40,47 +39,28 @@ public class musicBeatControl : MonoBehaviour
     #region 生成光圈与设置敌人行动序列
     private void leftMoveBorn(KoreographyEvent myEvent)
     {
-        Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
-        newImage.rectTransform.position = leftMoveBu.position;
-        levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.leftMove, newImage));
+        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        go.transform.position = leftMoveBu.transform.position;
     }
     private void leftAttackBorn(KoreographyEvent myEvent)
     {
-        Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
-        newImage.rectTransform.position = leftAttackBu.position;
-        levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.leftAttack, newImage));
+        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        go.transform.position = leftAttackBu.transform.position;
     }
     private void rightMoveBorn(KoreographyEvent myEvent)
     {
-        Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
-        newImage.rectTransform.position = rightMoveBu.position;
-        levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.rightMove, newImage));
+        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        go.transform.position = rightMoveBu.transform.position;
     }
     private void rightAttackBorn(KoreographyEvent myEvent)
     {
-        Image newImage = Instantiate(lightCirclePrefab, lightCircleParent.transform);
-        newImage.rectTransform.position = rightAttackBu.position;
-        levelGlobalControl.instance.currentAperture = newImage.gameObject;
-        StartCoroutine(setFps(actType.rightAttack, newImage));
+        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        go.transform.position = rightAttackBu.transform.position;
     }
     #endregion
     private void OnDestroy()
     {
         Koreographer.Instance.ClearEventRegister();
-    }
-    private IEnumerator setFps(actType type,Image fps)
-    {
-        yield return new WaitForSeconds(.42f);
-        if(fps!=null)
-            fps.color = new Color(1,.38f,.38f);
-        levelGlobalControl.instance.setActType(type);
-        if (type == actType.leftMove||type == actType.rightMove)
-        {
-            mEnemy.playAttack();
-        }
     }
     public void changeDir(KoreographyEvent myEvent)
     {
