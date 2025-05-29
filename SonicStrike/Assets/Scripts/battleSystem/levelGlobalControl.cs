@@ -9,7 +9,6 @@ public class levelGlobalControl : MonoBehaviour
     public static levelGlobalControl instance;
     public player player;
     public enemy enemy;
-    public GameObject currentAperture;
     public AudioSource auidoPlayer;
     [SerializeField] private CanvasGroup blackImage;
     [SerializeField] private GameObject winUI;

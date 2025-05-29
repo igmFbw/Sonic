@@ -4,15 +4,30 @@ using UnityEngine;
 using DG.Tweening;
 public class aperture : MonoBehaviour
 {
-    [SerializeField] private RectTransform rt;
+    [SerializeField] private SpriteRenderer sr;
     private Tween te;
+    private beatButton buParent;
+    public bool canClick;
     private void Start()
     {
-        te = rt.DOScale(new Vector2(.7f,.7f), .8f);
+        StartCoroutine(setFps());
+        canClick = false;
+        te = transform.DOScale(new Vector2(.54f,.54f), .8f);
         Destroy(gameObject, .84f);
+    }
+    public void setBu(beatButton bu)
+    {
+        buParent = bu;
     }
     private void OnDestroy()
     {
         te.Kill();
+        buParent.removeAperture();
+    }
+    private IEnumerator setFps()
+    {
+        yield return new WaitForSeconds(.5f);
+        sr.color = new Color(1, .55f, .55f);
+        canClick = true;
     }
 }

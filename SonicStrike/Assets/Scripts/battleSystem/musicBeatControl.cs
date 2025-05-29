@@ -14,8 +14,7 @@ public class musicBeatControl : MonoBehaviour
     private const string exchangePosID = "exchangePos";
     private const string levelEndID = "levelEnd";
     #endregion
-    [SerializeField] private GameObject lightCirclePrefab;
-    [SerializeField] private GameObject lightCircleParent;
+    [SerializeField] private aperture lightCirclePrefab;
     [SerializeField] private enemy mEnemy;
     [SerializeField] private Transform came;
     [SerializeField] private Transform cameraLeftPos;
@@ -39,23 +38,31 @@ public class musicBeatControl : MonoBehaviour
     #region 生成光圈与设置敌人行动序列
     private void leftMoveBorn(KoreographyEvent myEvent)
     {
-        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        aperture go = Instantiate(lightCirclePrefab, leftMoveBu.transform);
         go.transform.position = leftMoveBu.transform.position;
+        go.setBu(leftMoveBu);
+        leftMoveBu.addAperture(go);
     }
     private void leftAttackBorn(KoreographyEvent myEvent)
     {
-        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        aperture go = Instantiate(lightCirclePrefab, leftAttackBu.transform);
         go.transform.position = leftAttackBu.transform.position;
+        go.setBu(leftAttackBu);
+        leftAttackBu.addAperture(go);
     }
     private void rightMoveBorn(KoreographyEvent myEvent)
     {
-        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        aperture go = Instantiate(lightCirclePrefab, rightMoveBu.transform);
         go.transform.position = rightMoveBu.transform.position;
+        go.setBu(rightMoveBu);
+        rightMoveBu.addAperture(go);
     }
     private void rightAttackBorn(KoreographyEvent myEvent)
     {
-        GameObject go = Instantiate(lightCirclePrefab, lightCircleParent.transform);
+        aperture go = Instantiate(lightCirclePrefab, rightAttackBu.transform);
         go.transform.position = rightAttackBu.transform.position;
+        go.setBu(rightAttackBu);
+        rightAttackBu.addAperture(go);
     }
     #endregion
     private void OnDestroy()

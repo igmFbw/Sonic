@@ -3,27 +3,29 @@ using UnityEngine.UI;
 public class keyBoardInputHandle : MonoBehaviour
 {
     #region °´Å¥
-    [SerializeField] private RectTransform leftMoveBuRt;
-    [SerializeField] private RectTransform leftAttackBuRt;
-    [SerializeField] private RectTransform rightMoveBuRt;
-    [SerializeField] private RectTransform rightAttackBuRt;
+    [SerializeField] private beatButton leftMoveBu;
+    [SerializeField] private beatButton leftAttackBu;
+    [SerializeField] private beatButton rightMoveBu;
+    [SerializeField] private beatButton rightAttackBu;
     #endregion
-    [SerializeField] private Image clickRightPrefab;
-    [SerializeField] private Image clickErrorPrefab;
-    [SerializeField] private Transform clickEffectParent;
     [SerializeField] private player mPlayer;
     private void Update()
     {
-        
-    }
-    private void resetFps()
-    {
-        Destroy(levelGlobalControl.instance.currentAperture);
-    }
-    private void playClickEffect(Vector3 pos,Image clickEffect)
-    {
-        Image newImage = Instantiate(clickEffect, clickEffectParent);
-        newImage.rectTransform.position = pos;
-        Destroy(newImage.gameObject, .3f);
+        if(Input.GetKeyUp(KeyCode.D))
+        {
+            leftMoveBu.click();
+        }
+        if (Input.GetKeyUp(KeyCode.F))
+        {
+            leftAttackBu.click();
+        }
+        if (Input.GetKeyUp(KeyCode.J))
+        {
+            rightAttackBu.click();
+        }
+        if (Input.GetKeyUp(KeyCode.K))
+        {
+            rightMoveBu.click();
+        }
     }
 }
