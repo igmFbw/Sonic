@@ -3,14 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class enemyAnimControl : entityAnimControl
 {
-    [SerializeField] private playerAnimControl pAnim;
     private Vector3 pos;
-    #region 与玩家动画关键帧匹配
-    public void setPlayerDodge()
-    {
-        pAnim.anim.SetBool("dodgeKey", true);
-    }
-    #endregion
     public void turnDodge(Vector3 pos)
     {
         anim.SetBool("isDodge", true);
