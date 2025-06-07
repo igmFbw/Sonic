@@ -12,6 +12,8 @@ public class musicBeatControl : MonoBehaviour
     private const string rightMoveID = "rightMove";
     private const string rightAttackID = "rightAttack";
     private const string exchangePosID = "exchangePos";
+    private const string attackID = "attack";
+    private const string dodgeID = "dodge";
     private const string levelEndID = "levelEnd";
     #endregion
     [SerializeField] private aperture lightCirclePrefab;
