@@ -36,6 +36,8 @@ public class musicBeatControl : MonoBehaviour
         Koreographer.Instance.RegisterForEvents(rightAttackID, rightAttackBorn);
         Koreographer.Instance.RegisterForEvents(exchangePosID, changeDir);
         Koreographer.Instance.RegisterForEvents(levelEndID, levelEnd);
+        Koreographer.Instance.RegisterForEvents(attackID, playerAttack);
+        Koreographer.Instance.RegisterForEvents(dodgeID, playerDodge);
     }
     #region 生成光圈与设置敌人行动序列
     private void leftMoveBorn(KoreographyEvent myEvent)
@@ -65,6 +67,14 @@ public class musicBeatControl : MonoBehaviour
         go.transform.position = rightAttackBu.transform.position;
         go.setBu(rightAttackBu);
         rightAttackBu.addAperture(go);
+    }
+    private void playerAttack(KoreographyEvent myEvent)
+    {
+        levelGlobalControl.instance.attack();
+    }
+    private void playerDodge(KoreographyEvent myEvent)
+    {
+        levelGlobalControl.instance.dodge();
     }
     #endregion
     private void OnDestroy()

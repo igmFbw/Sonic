@@ -1,12 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+public enum buttonType
+{
+    attack,hurt
+}
 public class beatButton : MonoBehaviour
 {
     [SerializeField] private Animator anim;
     [SerializeField] private AudioSource audioPlayer;
     [SerializeField] private AudioClip rightSound;
     [SerializeField] private AudioClip errorSound;
+    [SerializeField] private buttonType type;
     private List<aperture> apertureList;
     private void Awake()
     {
@@ -20,6 +25,10 @@ public class beatButton : MonoBehaviour
             Destroy(apertureList[0].gameObject);
             audioPlayer.clip = rightSound;
             audioPlayer.Play();
+            if (type == buttonType.hurt)
+                levelGlobalControl.instance.hurtClick();
+            else
+                levelGlobalControl.instance.attackClick();
         }
         else
         {

@@ -17,8 +17,24 @@ public class levelGlobalControl : MonoBehaviour
     [SerializeField] private RectTransform acquireItem;
     [SerializeField] private Text acquireText;
     [SerializeField] private int levelIndex;
-    private int attackCount;
-    private int hurtCount;
+    [SerializeField] private Slider attackSlider;
+    [SerializeField] private Slider hurtSlider;
+    private int attackCount
+    {
+        get => attackCount;
+        set
+        {
+            attackSlider.value = value;
+        }
+    }
+    private int hurtCount
+    {
+        get => hurtCount;
+        set
+        {
+            hurtSlider.value = value;
+        }
+    }
     private void Awake()
     {
         instance = this;
@@ -65,20 +81,24 @@ public class levelGlobalControl : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
-    public void clickRight()
+    public void attackClick()
     {
         attackCount += 10;
-        if (attackCount >= 100)
-        {
-            attackCount -= 100;
-        }
     }
-    public void clickError()
+    public void hurtClick()
     {
-        hurtCount += 20;
-        if(hurtCount >= 100)
-        {
-            hurtCount -= 100;
-        }
+        hurtCount += 10;
+    }
+    public void attack()
+    {
+        if (attackCount >= 100)
+            player.playAttack();
+        attackCount = 0;
+    }
+    public void dodge()
+    {
+        if (hurtCount >= 100)
+            player.playDodge();
+        hurtCount = 0;
     }
 }
