@@ -1,9 +1,10 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static UnityEngine.Rendering.DebugUI;
 public class levelGlobalControl : MonoBehaviour
 {
     public static levelGlobalControl instance;
@@ -19,22 +20,8 @@ public class levelGlobalControl : MonoBehaviour
     [SerializeField] private int levelIndex;
     [SerializeField] private Slider attackSlider;
     [SerializeField] private Slider hurtSlider;
-    private int attackCount
-    {
-        get => attackCount;
-        set
-        {
-            attackSlider.value = value;
-        }
-    }
-    private int hurtCount
-    {
-        get => hurtCount;
-        set
-        {
-            hurtSlider.value = value;
-        }
-    }
+    private int attackCount;
+    private int hurtCount;
     private void Awake()
     {
         instance = this;
@@ -84,21 +71,25 @@ public class levelGlobalControl : MonoBehaviour
     public void attackClick()
     {
         attackCount += 10;
+        attackSlider.value = attackCount;
     }
     public void hurtClick()
     {
         hurtCount += 10;
+        hurtSlider.value = hurtCount;
     }
     public void attack()
     {
         if (attackCount >= 100)
             player.playAttack();
         attackCount = 0;
+        attackSlider.value = attackCount;
     }
     public void dodge()
     {
         if (hurtCount >= 100)
             player.playDodge();
         hurtCount = 0;
+        hurtSlider.value = hurtCount;
     }
 }
