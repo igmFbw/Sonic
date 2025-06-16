@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: attackTrack
   m_EditorClassIdentifier: 
   mEventID: attack
-  mEventList: []
+  mEventList:
+  - mStartSample: 178007
+    mEndSample: 178007
+  - mStartSample: 274086
+    mEndSample: 274086
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 
