@@ -70,12 +70,12 @@ public class levelGlobalControl : MonoBehaviour
     }
     public void attackClick()
     {
-        attackCount += 10;
+        attackCount += 20;
         attackSlider.value = attackCount;
     }
     public void hurtClick()
     {
-        hurtCount += 10;
+        hurtCount += 20;
         hurtSlider.value = hurtCount;
     }
     public void attack()
