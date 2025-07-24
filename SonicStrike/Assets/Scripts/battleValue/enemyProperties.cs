@@ -8,11 +8,16 @@ public class enemyProperties : properties
     public override void hurt(float damage)
     {
         currentHealth -= damage;
-        if (currentHealth <= 0)
+        if(currentHealth == 0)
+        {
+            healthyBar.updateValue(0);
+        }
+        else if (currentHealth < 0)
         {
             yuanShen.color = Color.yellow;
-            healthyBar.updateValue(0);
             levelGlobalControl.instance.moneyAcquire += Mathf.RoundToInt(damage);
+            if (levelGlobalControl.instance.moneyAcquire > maxHealth)
+                levelGlobalControl.instance.moneyAcquire = Mathf.RoundToInt(maxHealth);
             healthyBar.updateValue(levelGlobalControl.instance.moneyAcquire, "Point:");
         }
         else

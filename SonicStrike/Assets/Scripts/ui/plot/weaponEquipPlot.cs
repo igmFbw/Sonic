@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
-//using static UnityEditor.Progress;
 public class weaponEquipPlot : equipPlot
 {
     private weapon equipItem;
@@ -37,5 +36,10 @@ public class weaponEquipPlot : equipPlot
     {
         equipItem = item;
         itemSprite.sprite = equipItem.basicData.itemSprite;
+    }
+    public void openBag()
+    {
+        bag.gameObject.SetActive(true);
+        bag.openBag(0);
     }
 }

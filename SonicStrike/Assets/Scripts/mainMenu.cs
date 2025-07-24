@@ -27,4 +27,8 @@ public class mainMenu : MonoBehaviour
         yield return new WaitForSeconds(6);
         SceneManager.LoadScene(1);
     }
+    public void skipPlot()
+    {
+        SceneManager.LoadScene(1);
+    }
 }
