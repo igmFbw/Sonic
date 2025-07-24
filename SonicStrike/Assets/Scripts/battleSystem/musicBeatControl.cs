@@ -12,8 +12,6 @@ public class musicBeatControl : MonoBehaviour
     private const string rightMoveID = "rightMove";
     private const string rightAttackID = "rightAttack";
     private const string exchangePosID = "exchangePos";
-    private const string attackID = "attack";
-    private const string dodgeID = "dodge";
     private const string levelEndID = "levelEnd";
     #endregion
     [SerializeField] private aperture lightCirclePrefab;
@@ -36,45 +34,35 @@ public class musicBeatControl : MonoBehaviour
         Koreographer.Instance.RegisterForEvents(rightAttackID, rightAttackBorn);
         Koreographer.Instance.RegisterForEvents(exchangePosID, changeDir);
         Koreographer.Instance.RegisterForEvents(levelEndID, levelEnd);
-        Koreographer.Instance.RegisterForEvents(attackID, playerAttack);
-        Koreographer.Instance.RegisterForEvents(dodgeID, playerDodge);
     }
     #region 生成光圈与设置敌人行动序列
     private void leftMoveBorn(KoreographyEvent myEvent)
     {
         aperture go = Instantiate(lightCirclePrefab, leftMoveBu.transform);
         go.transform.position = leftMoveBu.transform.position;
-        go.setBu(leftMoveBu);
+        go.setBu(leftMoveBu,buttonType.hurt);
         leftMoveBu.addAperture(go);
     }
     private void leftAttackBorn(KoreographyEvent myEvent)
     {
         aperture go = Instantiate(lightCirclePrefab, leftAttackBu.transform);
         go.transform.position = leftAttackBu.transform.position;
-        go.setBu(leftAttackBu);
+        go.setBu(leftAttackBu,buttonType.attack);
         leftAttackBu.addAperture(go);
     }
     private void rightMoveBorn(KoreographyEvent myEvent)
     {
         aperture go = Instantiate(lightCirclePrefab, rightMoveBu.transform);
         go.transform.position = rightMoveBu.transform.position;
-        go.setBu(rightMoveBu);
+        go.setBu(rightMoveBu, buttonType.hurt);
         rightMoveBu.addAperture(go);
     }
     private void rightAttackBorn(KoreographyEvent myEvent)
     {
         aperture go = Instantiate(lightCirclePrefab, rightAttackBu.transform);
         go.transform.position = rightAttackBu.transform.position;
-        go.setBu(rightAttackBu);
+        go.setBu(rightAttackBu, buttonType.attack);
         rightAttackBu.addAperture(go);
-    }
-    private void playerAttack(KoreographyEvent myEvent)
-    {
-        levelGlobalControl.instance.attack();
-    }
-    private void playerDodge(KoreographyEvent myEvent)
-    {
-        levelGlobalControl.instance.dodge();
     }
     #endregion
     private void OnDestroy()

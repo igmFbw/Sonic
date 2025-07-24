@@ -14,24 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mEventID: rightAttack
   mEventList:
-  - mStartSample: 104066
-    mEndSample: 104066
-  - mStartSample: 175269
-    mEndSample: 175269
-  - mStartSample: 235517
-    mEndSample: 235517
-  - mStartSample: 290289
-    mEndSample: 290289
-  - mStartSample: 364231
-    mEndSample: 364231
-  - mStartSample: 421741
-    mEndSample: 421741
-  - mStartSample: 490205
-    mEndSample: 490205
-  - mStartSample: 525807
-    mEndSample: 525807
-  - mStartSample: 564147
-    mEndSample: 564147
   - mStartSample: 5660676
     mEndSample: 5660676
   - mStartSample: 6151068

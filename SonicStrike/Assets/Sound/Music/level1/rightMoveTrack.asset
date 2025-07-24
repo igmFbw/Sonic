@@ -13,27 +13,7 @@ MonoBehaviour:
   m_Name: rightMoveTrack
   m_EditorClassIdentifier: 
   mEventID: rightMove
-  mEventList:
-  - mStartSample: 98588
-    mEndSample: 98588
-  - mStartSample: 153360
-    mEndSample: 153360
-  - mStartSample: 219086
-    mEndSample: 219086
-  - mStartSample: 265642
-    mEndSample: 265642
-  - mStartSample: 312198
-    mEndSample: 312198
-  - mStartSample: 347799
-    mEndSample: 347799
-  - mStartSample: 416264
-    mEndSample: 416264
-  - mStartSample: 476512
-    mEndSample: 476512
-  - mStartSample: 523068
-    mEndSample: 523068
-  - mStartSample: 564147
-    mEndSample: 564147
+  mEventList: []
   _SerializedPayloadTypes: []
   _AssetPayloads: []
   _AssetPayloadIdxs: 

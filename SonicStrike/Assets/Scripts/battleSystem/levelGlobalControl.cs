@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using static UnityEngine.Rendering.DebugUI;
 public class levelGlobalControl : MonoBehaviour
 {
     public static levelGlobalControl instance;
@@ -22,6 +21,8 @@ public class levelGlobalControl : MonoBehaviour
     [SerializeField] private Slider hurtSlider;
     private int attackCount;
     private int hurtCount;
+    private int attackIndex;
+    private int hurtIndex;
     private void Awake()
     {
         instance = this;
@@ -72,24 +73,42 @@ public class levelGlobalControl : MonoBehaviour
     {
         attackCount += 20;
         attackSlider.value = attackCount;
+        attack();
     }
     public void hurtClick()
     {
         hurtCount += 20;
         hurtSlider.value = hurtCount;
+        if(hurtCount >= 100)
+            player.playDodge();
     }
     public void attack()
     {
         if (attackCount >= 100)
             player.playAttack();
-        attackCount = 0;
-        attackSlider.value = attackCount;
     }
-    public void dodge()
+    public void addApertureIndex(buttonType type)
     {
-        if (hurtCount >= 100)
-            player.playDodge();
-        hurtCount = 0;
-        hurtSlider.value = hurtCount;
+        if(type == buttonType.attack)
+        {
+            attackIndex++;
+            if(attackIndex == 5)
+            {
+                attackCount = 0;
+                attackSlider.value = attackCount;
+                attackIndex = 0;
+            }
+        }
+        else
+        {
+            hurtIndex++;
+            if(hurtIndex == 5)
+            {
+                hurtCount = 0;
+                hurtSlider.value = hurtCount;
+                enemy.playAttack();
+                hurtIndex = 0;
+            }
+        }
     }
 }
